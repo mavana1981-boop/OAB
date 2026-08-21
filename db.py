@@ -59,6 +59,20 @@ def init_db():
                     )
                     """
                 )
+                cur.execute(
+                    """
+                    CREATE TABLE IF NOT EXISTS import_jobs (
+                        id SERIAL PRIMARY KEY,
+                        status TEXT NOT NULL DEFAULT 'processing',
+                        created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
+                        parsed INTEGER,
+                        added JSONB,
+                        duplicates JSONB,
+                        error TEXT,
+                        total_atual INTEGER
+                    )
+                    """
+                )
     finally:
         conn.close()
 
@@ -202,3 +216,75 @@ def insert_new_questions(items):
     finally:
         conn.close()
     return added, duplicates
+
+
+# --- Jobs de importação em segundo plano ---------------------------------
+#
+# A extração via Claude + gravação no banco pode levar bem mais tempo do
+# que o proxy do Railway tolera numa única requisição HTTP (o erro
+# "upstream error" no navegador é exatamente isso: o proxy desiste da
+# conexão antes da resposta voltar, mesmo com o servidor ainda
+# processando). Por isso o POST /importar só cria um "job" aqui e devolve
+# na hora; o processamento de verdade roda numa thread em segundo plano,
+# e a página de status faz polling até o job terminar.
+
+
+def create_job():
+    conn = get_conn()
+    try:
+        with conn:
+            with conn.cursor() as cur:
+                cur.execute(
+                    "INSERT INTO import_jobs (status) VALUES ('processing') RETURNING id"
+                )
+                return cur.fetchone()[0]
+    finally:
+        conn.close()
+
+
+def set_job_error(job_id, message):
+    conn = get_conn()
+    try:
+        with conn:
+            with conn.cursor() as cur:
+                cur.execute(
+                    "UPDATE import_jobs SET status = 'error', error = %s WHERE id = %s",
+                    (message, job_id),
+                )
+    finally:
+        conn.close()
+
+
+def set_job_done(job_id, parsed, added, duplicates, total_atual):
+    conn = get_conn()
+    try:
+        with conn:
+            with conn.cursor() as cur:
+                cur.execute(
+                    """
+                    UPDATE import_jobs
+                    SET status = 'done', parsed = %s, added = %s,
+                        duplicates = %s, total_atual = %s
+                    WHERE id = %s
+                    """,
+                    (
+                        parsed,
+                        psycopg2.extras.Json(added),
+                        psycopg2.extras.Json(duplicates),
+                        total_atual,
+                        job_id,
+                    ),
+                )
+    finally:
+        conn.close()
+
+
+def get_job(job_id):
+    conn = get_conn()
+    try:
+        with conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor) as cur:
+            cur.execute("SELECT * FROM import_jobs WHERE id = %s", (job_id,))
+            row = cur.fetchone()
+            return dict(row) if row else None
+    finally:
+        conn.close()
