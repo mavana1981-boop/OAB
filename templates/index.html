@@ -264,6 +264,14 @@
     color:var(--navy-deep);
   }
   .rank-item{display:flex;flex-direction:column;gap:2px;}
+  .rank-list li.top5{
+    background:rgba(122,46,56,0.08);
+    margin:0 -12px;
+    padding:7px 12px;
+    border-bottom:1px dotted rgba(122,46,56,0.18);
+  }
+  .rank-list li.top5 .idx{color:var(--burgundy);font-weight:600;}
+  .rank-list li.top5 .bar-fill{background:var(--burgundy);}
 
   /* Table */
   table{
@@ -541,7 +549,8 @@ function renderRanking(list){
   rankList.innerHTML = entries.map(([key,count],i)=>{
     const [assunto, materia] = key.split('|||');
     const pct = (count/max*100).toFixed(0);
-    return `<li>
+    const topClass = i < 5 ? ' top5' : '';
+    return `<li class="${topClass.trim()}">
       <span class="idx">${String(i+1).padStart(2,'0')}</span>
       <div class="rank-item">
         <span class="name">${assunto} <span class="badge ${clsName(materia)}" style="margin-left:6px">${materia}</span></span>
