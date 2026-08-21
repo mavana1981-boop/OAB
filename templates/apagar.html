@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apagar todas as questões — Diário de Estudos OAB</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#EFEAE0; --ink:#22262B; --ink-soft:#5B5A52;
+    --navy:#1B3A4B; --navy-deep:#122732; --brass:#A9822F;
+    --burgundy:#7A2E38; --line: rgba(34,38,43,0.15); --card:#F7F4EB;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:'Inter',sans-serif;}
+  .wrap{max-width:600px;margin:0 auto;padding:40px 24px 80px;}
+  .eyebrow{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--burgundy);margin-bottom:6px;}
+  h1{font-family:'Source Serif 4',serif;font-weight:700;font-size:28px;margin:0 0 6px;
+    color:var(--navy-deep);}
+  p.lead{color:var(--ink-soft);font-size:14px;line-height:1.55;margin-bottom:22px;}
+  .stat{font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:var(--ink-soft);margin-bottom:20px;}
+  .danger-box{
+    border:1px solid var(--burgundy);
+    background:rgba(122,46,56,0.07);
+    color:var(--burgundy);
+    padding:16px 18px;
+    font-size:13.5px;
+    line-height:1.55;
+    margin-bottom:26px;
+  }
+  .danger-box strong{color:var(--burgundy);}
+  .err{padding:12px 14px;font-size:12.5px;border:1px solid var(--burgundy);
+    color:var(--burgundy);background:rgba(122,46,56,0.1);margin-bottom:20px;}
+  .warn{margin-bottom:20px;padding:12px 14px;font-size:12.5px;border:1px solid var(--burgundy);
+    color:var(--burgundy);background:rgba(122,46,56,0.06);}
+  .card{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--burgundy);padding:22px;}
+  label{display:block;font-family:'IBM Plex Mono',monospace;font-size:11px;
+    text-transform:uppercase;letter-spacing:.08em;color:var(--ink-soft);margin:16px 0 6px;}
+  label:first-of-type{margin-top:0;}
+  input[type=text], input[type=password]{
+    width:100%;font-family:'Inter',sans-serif;font-size:13px;padding:9px 10px;
+    border:1px solid var(--ink);background:var(--paper);color:var(--ink);
+  }
+  .btn-danger{margin-top:22px;font-family:'IBM Plex Mono',monospace;font-size:12.5px;
+    letter-spacing:.05em;text-transform:uppercase;background:var(--burgundy);color:#fff;
+    border:none;padding:11px 18px;cursor:pointer;width:100%;}
+  .btn-danger:hover{background:#5e2029;}
+  .back{display:inline-block;margin-top:26px;font-family:'IBM Plex Mono',monospace;
+    font-size:12px;color:var(--navy-deep);text-decoration:none;border-bottom:1px solid var(--brass);}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="eyebrow">Ação destrutiva</div>
+  <h1>Apagar todas as questões</h1>
+  <p class="lead">
+    Isso remove permanentemente TODAS as questões da base — não é
+    possível desfazer. O histórico de importações (jobs) não é afetado,
+    só a tabela de questões.
+  </p>
+
+  <div class="stat">Base atual: <strong>{{ total_atual }}</strong> questões — todas serão apagadas.</div>
+
+  {% if erro %}
+    <div class="err">{{ erro }}</div>
+  {% endif %}
+
+  {% if not token_configured %}
+  <div class="warn">
+    A variável de ambiente <strong>IMPORT_TOKEN</strong> não está
+    configurada no servidor, então esta ação está bloqueada por padrão.
+  </div>
+  {% endif %}
+
+  <div class="danger-box">
+    <strong>Atenção:</strong> depois de confirmar, não tem como recuperar
+    as questões apagadas a não ser reimportando os PDFs originais
+    novamente do zero.
+  </div>
+
+  <div class="card">
+    <form action="{{ url_for('apagar_tudo') }}" method="post">
+      <label for="token">Chave de importação</label>
+      <input type="password" id="token" name="token" placeholder="IMPORT_TOKEN" required>
+
+      <label for="confirmacao">Digite "APAGAR" (maiúsculas) para confirmar</label>
+      <input type="text" id="confirmacao" name="confirmacao" placeholder="APAGAR" required autocomplete="off">
+
+      <button class="btn-danger" type="submit">Apagar todas as questões</button>
+    </form>
+  </div>
+
+  <a class="back" href="{{ url_for('index') }}">&larr; voltar ao dashboard, sem apagar nada</a>
+</div>
+</body>
+</html>
