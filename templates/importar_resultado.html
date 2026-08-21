@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resultado da importação — Diário de Estudos OAB</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#EFEAE0; --ink:#22262B; --ink-soft:#5B5A52;
+    --navy:#1B3A4B; --navy-deep:#122732; --brass:#A9822F;
+    --burgundy:#7A2E38; --sage:#4B6355; --line: rgba(34,38,43,0.15); --card:#F7F4EB;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:'Inter',sans-serif;}
+  .wrap{max-width:760px;margin:0 auto;padding:40px 24px 80px;}
+  .eyebrow{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--ink-soft);margin-bottom:6px;}
+  h1{font-family:'Source Serif 4',serif;font-weight:700;font-size:28px;margin:0 0 20px;
+    color:var(--navy-deep);}
+  .kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:28px;}
+  .kpi{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--navy);
+    padding:14px 16px;}
+  .kpi.dup{border-left-color:var(--burgundy);}
+  .kpi.add{border-left-color:var(--sage);}
+  .kpi .label{font-family:'IBM Plex Mono',monospace;font-size:10px;text-transform:uppercase;
+    letter-spacing:.08em;color:var(--ink-soft);margin-bottom:4px;}
+  .kpi .value{font-family:'Source Serif 4',serif;font-size:26px;font-weight:700;color:var(--navy-deep);}
+  .err{padding:16px;border:1px solid var(--burgundy);color:var(--burgundy);
+    background:rgba(122,46,56,0.06);font-size:13.5px;margin-bottom:24px;}
+  .section{margin-top:28px;}
+  .section h2{font-family:'Source Serif 4',serif;font-size:17px;color:var(--navy-deep);
+    margin:0 0 10px;padding-bottom:6px;border-bottom:1px solid var(--ink);}
+  table{width:100%;border-collapse:collapse;font-size:12.5px;background:var(--card);}
+  thead th{text-align:left;font-family:'IBM Plex Mono',monospace;font-size:10px;
+    text-transform:uppercase;color:var(--ink-soft);padding:8px;border-bottom:2px solid var(--ink);}
+  tbody td{padding:7px 8px;border-bottom:1px solid var(--line);}
+  .back{display:inline-block;margin-top:30px;font-family:'IBM Plex Mono',monospace;
+    font-size:12px;color:var(--navy-deep);text-decoration:none;border-bottom:1px solid var(--brass);
+    margin-right:20px;}
+  .empty{color:var(--ink-soft);font-size:13px;font-style:italic;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="eyebrow">Resultado</div>
+  <h1>Importação de novo lote</h1>
+
+  {% if erro %}
+    <div class="err">{{ erro }}</div>
+  {% else %}
+    <div class="kpis">
+      <div class="kpi"><div class="label">Lidas no PDF</div><div class="value">{{ parsed }}</div></div>
+      <div class="kpi add"><div class="label">Adicionadas</div><div class="value">{{ added|length }}</div></div>
+      <div class="kpi dup"><div class="label">Duplicadas (ignoradas)</div><div class="value">{{ duplicates|length }}</div></div>
+    </div>
+
+    <p style="font-size:13px;color:var(--ink-soft);">Base atual após importação: <strong>{{ total_atual }}</strong> questões.</p>
+
+    <div class="section">
+      <h2>Questões adicionadas</h2>
+      {% if added %}
+      <table>
+        <thead><tr><th>#</th><th>Ano</th><th>Matéria</th><th>Assunto</th><th>Gab.</th></tr></thead>
+        <tbody>
+          {% for q in added %}
+          <tr><td>{{ q.id }}</td><td>{{ q.ano }}</td><td>{{ q.materia }}</td><td>{{ q.assunto }}</td><td>{{ q.gabarito }}</td></tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      {% else %}
+      <p class="empty">Nenhuma questão nova — todas as do PDF já estavam na base.</p>
+      {% endif %}
+    </div>
+
+    <div class="section">
+      <h2>Duplicadas (não adicionadas)</h2>
+      {% if duplicates %}
+      <table>
+        <thead><tr><th>QID</th><th>Ano</th><th>Matéria</th><th>Assunto</th></tr></thead>
+        <tbody>
+          {% for q in duplicates %}
+          <tr><td>{{ q.qid }}</td><td>{{ q.ano }}</td><td>{{ q.materia }}</td><td>{{ q.assunto }}</td></tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      {% else %}
+      <p class="empty">Nenhuma duplicata encontrada.</p>
+      {% endif %}
+    </div>
+  {% endif %}
+
+  <a class="back" href="{{ url_for('importar_form') }}">&larr; importar outro PDF</a>
+  <a class="back" href="{{ url_for('index') }}">ver dashboard atualizado &rarr;</a>
+</div>
+</body>
+</html>

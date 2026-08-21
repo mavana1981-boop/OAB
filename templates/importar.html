@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Importar novo lote — Diário de Estudos OAB</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#EFEAE0; --ink:#22262B; --ink-soft:#5B5A52;
+    --navy:#1B3A4B; --navy-deep:#122732; --brass:#A9822F;
+    --burgundy:#7A2E38; --line: rgba(34,38,43,0.15); --card:#F7F4EB;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:'Inter',sans-serif;}
+  .wrap{max-width:640px;margin:0 auto;padding:40px 24px 80px;}
+  .eyebrow{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--ink-soft);margin-bottom:6px;}
+  h1{font-family:'Source Serif 4',serif;font-weight:700;font-size:30px;margin:0 0 6px;
+    color:var(--navy-deep);}
+  p.lead{color:var(--ink-soft);font-size:14px;line-height:1.5;margin-bottom:26px;}
+  .card{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--navy);
+    padding:22px;}
+  label{display:block;font-family:'IBM Plex Mono',monospace;font-size:11px;
+    text-transform:uppercase;letter-spacing:.08em;color:var(--ink-soft);margin:16px 0 6px;}
+  label:first-of-type{margin-top:0;}
+  input[type=file], input[type=password]{
+    width:100%;font-family:'Inter',sans-serif;font-size:13px;padding:9px 10px;
+    border:1px solid var(--ink);background:var(--paper);color:var(--ink);
+  }
+  .btn{margin-top:22px;font-family:'IBM Plex Mono',monospace;font-size:12.5px;
+    letter-spacing:.05em;text-transform:uppercase;background:var(--navy);color:#fff;
+    border:none;padding:11px 18px;cursor:pointer;}
+  .btn:hover{background:var(--navy-deep);}
+  .warn{margin-top:18px;padding:12px 14px;font-size:12.5px;border:1px solid var(--burgundy);
+    color:var(--burgundy);background:rgba(122,46,56,0.06);}
+  .back{display:inline-block;margin-top:26px;font-family:'IBM Plex Mono',monospace;
+    font-size:12px;color:var(--navy-deep);text-decoration:none;border-bottom:1px solid var(--brass);}
+  .stat{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--ink-soft);margin-bottom:20px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="eyebrow">Manutenção do caderno</div>
+  <h1>Importar novo lote de questões</h1>
+  <p class="lead">
+    Envie um PDF exportado do TecConcursos (mesmo formato do caderno atual).
+    O Claude lê o PDF, extrai matéria, assunto, ano e gabarito de cada
+    questão, e o sistema descarta automaticamente qualquer questão cujo
+    número já exista na base — nada é duplicado.
+  </p>
+
+  <div class="stat">Base atual: {{ total_atual }} questões</div>
+
+  {% if not token_configured %}
+  <div class="warn">
+    A variável de ambiente <strong>IMPORT_TOKEN</strong> não está
+    configurada no servidor. Configure-a no Railway para habilitar esta
+    rota (ela protege a importação para que só você consiga escrever na
+    base). A variável <strong>ANTHROPIC_API_KEY</strong> também precisa
+    estar definida.
+  </div>
+  {% endif %}
+
+  <div class="card">
+    <form action="{{ url_for('importar_pdf') }}" method="post" enctype="multipart/form-data">
+      <label for="pdf">Arquivo PDF</label>
+      <input type="file" id="pdf" name="pdf" accept="application/pdf" required>
+
+      <label for="token">Chave de importação</label>
+      <input type="password" id="token" name="token" placeholder="IMPORT_TOKEN" required>
+
+      <button class="btn" type="submit">Processar com Claude</button>
+    </form>
+  </div>
+
+  <a class="back" href="{{ url_for('index') }}">&larr; voltar ao dashboard</a>
+</div>
+</body>
+</html>

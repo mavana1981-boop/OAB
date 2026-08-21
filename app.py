@@ -1,83 +1,77 @@
 import json
 import os
+from pathlib import Path
 
-from flask import Flask, jsonify, render_template, request
+from flask import Flask, jsonify, redirect, render_template, request, url_for
 
-import db
-from importer import ImportError_, extract_questions_from_pdf
+from importer import ImportError_, extract_questions_from_pdf, merge_new_questions
 
 app = Flask(__name__)
 
-# Chave simples para proteger a rota de importação (que escreve no banco).
-# Defina IMPORT_TOKEN nas variáveis de ambiente do Railway; sem ela
-# configurada, a importação fica bloqueada por segurança.
+DATA_PATH = Path(__file__).parent / "data.json"
+
+# Chave simples para proteger a rota de importação (que escreve em
+# data.json). Defina IMPORT_TOKEN nas variáveis de ambiente do Railway;
+# sem ela configurada, a importação fica bloqueada por segurança.
 IMPORT_TOKEN = os.environ.get("IMPORT_TOKEN")
 
 
-def db_error_or_none():
-    """Garante schema criado + seed aplicado (uma vez por processo) e
-    devolve uma mensagem amigável se o banco não estiver configurado,
-    em vez de estourar um 500 cru."""
-    try:
-        db.ensure_ready()
-        return None
-    except Exception as e:
-        return str(e)
+def load_data():
+    with open(DATA_PATH, encoding="utf-8") as f:
+        return json.load(f)
+
+
+def save_data(data):
+    with open(DATA_PATH, "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=0)
 
 
 @app.route("/")
 def index():
-    err = db_error_or_none()
-    if err:
-        return f"<pre>Erro de conexão com o banco de dados:\n\n{err}</pre>", 500
-    data = db.fetch_all()
+    data = load_data()
     return render_template("index.html", data_json=json.dumps(data, ensure_ascii=False))
 
 
 @app.route("/api/questoes")
 def api_questoes():
-    err = db_error_or_none()
-    if err:
-        return jsonify({"error": err}), 500
+    """Optional JSON API with basic filtering, useful if you later want
+    to query the dataset from another tool (e.g. a script, or a future
+    mobile view) without re-parsing the embedded HTML payload."""
+    data = load_data()
 
-    materia = request.args.get("materia") or None
-    ano = request.args.get("ano") or None
-    gabarito = request.args.get("gabarito") or None
-    busca = request.args.get("busca") or None
+    materia = request.args.get("materia")
+    ano = request.args.get("ano")
+    gabarito = request.args.get("gabarito")
+    busca = request.args.get("busca", "").lower()
 
-    data = db.fetch_filtered(materia=materia, ano=ano, gabarito=gabarito, busca=busca)
+    if materia:
+        data = [d for d in data if d["materia"] == materia]
+    if ano:
+        data = [d for d in data if str(d["ano"]) == ano]
+    if gabarito:
+        data = [d for d in data if d["gabarito"] == gabarito]
+    if busca:
+        data = [d for d in data if busca in d["assunto"].lower()]
+
     return jsonify({"count": len(data), "questoes": data})
 
 
 @app.route("/healthz")
 def healthz():
-    err = db_error_or_none()
-    if err:
-        return {"status": "error", "detail": err}, 500
-    return {"status": "ok", "questoes": db.count()}
+    return {"status": "ok", "questoes": len(load_data())}
 
 
 @app.route("/importar", methods=["GET"])
 def importar_form():
-    err = db_error_or_none()
-    total = db.count() if not err else 0
     return render_template(
         "importar.html",
         token_configured=bool(IMPORT_TOKEN),
-        total_atual=total,
-        db_error=err,
+        total_atual=len(load_data()),
     )
 
 
 @app.route("/importar", methods=["POST"])
 def importar_pdf():
-    err = db_error_or_none()
-    if err:
-        return render_template(
-            "importar_resultado.html",
-            erro=f"Erro de conexão com o banco de dados: {err}",
-        ), 500
-
     if not IMPORT_TOKEN:
         return render_template(
             "importar_resultado.html",
@@ -111,18 +105,19 @@ def importar_pdf():
             erro=f"Falha ao processar o PDF com o Claude: {e}",
         ), 500
 
-    items = [
-        {**it, "url": f"https://www.tecconcursos.com.br/questoes/{it['qid']}"}
-        for it in raw_items
-    ]
-    added, duplicates = db.insert_new_questions(items)
+    existing = load_data()
+    added, duplicates = merge_new_questions(existing, raw_items)
+
+    if added:
+        existing.extend(added)
+        save_data(existing)
 
     return render_template(
         "importar_resultado.html",
         parsed=len(raw_items),
         added=added,
         duplicates=duplicates,
-        total_atual=db.count(),
+        total_atual=len(existing),
     )
 
 
