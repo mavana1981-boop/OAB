@@ -1,0 +1,3202 @@
+[
+{
+"id": 1,
+"ano": 2025,
+"materia": "AFO",
+"assunto": "Princípios Orçamentários",
+"gabarito": "B",
+"url": "https://www.tecconcursos.com.br/questoes/3636842"
+},
+{
+"id": 2,
+"ano": 2024,
+"materia": "AFO",
+"assunto": "LDO - Lei de Diretrizes Orçamentárias",
+"gabarito": "C",
+"url": "https://www.tecconcursos.com.br/questoes/3022023"
+},
+{
+"id": 3,
+"ano": 2026,
+"materia": "AFO",
+"assunto": "LOA - Lei Orçamentária Anual",
+"gabarito": "C",
+"url": "https://www.tecconcursos.com.br/questoes/3959089"
+},
+{
+"id": 4,
+"ano": 2025,
+"materia": "AFO",
+"assunto": "LOA - Lei Orçamentária Anual",
+"gabarito": "B",
+"url": "https://www.tecconcursos.com.br/questoes/3384027"
+},
+{
+"id": 5,
+"ano": 2024,
+"materia": "AFO",
+"assunto": "Tópicos Mesclados PPA, LDO e LOA",
+"gabarito": "A",
+"url": "https://www.tecconcursos.com.br/questoes/2851111"
+},
+{
+"id": 6,
+"ano": 2026,
+"materia": "AFO",
+"assunto": "Vedações Constitucionais (Art. 167 CF)",
+"gabarito": "A",
+"url": "https://www.tecconcursos.com.br/questoes/3959088"
+},
+{
+"id": 7,
+"ano": 2025,
+"materia": "AFO",
+"assunto": "Estágios da Despesa Pública",
+"gabarito": "A",
+"url": "https://www.tecconcursos.com.br/questoes/3737925"
+},
+{
+"id": 8,
+"ano": 2025,
+"materia": "AFO",
+"assunto": "Planejamento e Orçamento Público (LRF)",
+"gabarito": "D",
+"url": "https://www.tecconcursos.com.br/questoes/3737926"
+},
+{
+"id": 9,
+"ano": 2025,
+"materia": "AFO",
+"assunto": "Da Receita Pública (LRF)",
+"gabarito": "C",
+"url": "https://www.tecconcursos.com.br/questoes/3636852"
+},
+{
+"id": 10,
+"ano": 2025,
+"materia": "AFO",
+"assunto": "Despesas com Pessoal e Seguridade Social (LRF)",
+"gabarito": "D",
+"url": "https://www.tecconcursos.com.br/questoes/3384023"
+},
+{
+"id": 11,
+"ano": 2024,
+"materia": "AFO",
+"assunto": "Despesas com Pessoal e Seguridade Social (LRF)",
+"gabarito": "B",
+"url": "https://www.tecconcursos.com.br/questoes/3238801"
+},
+{
+"id": 12,
+"ano": 2024,
+"materia": "AFO",
+"assunto": "Transparência da Gestão Fiscal (LRF)",
+"gabarito": "C",
+"url": "https://www.tecconcursos.com.br/questoes/3238794"
+},
+{
+"id": 13,
+"ano": 2024,
+"materia": "AFO",
+"assunto": "Normas Municipais de Direito Financeiro",
+"gabarito": "A",
+"url": "https://www.tecconcursos.com.br/questoes/3022020"
+},
+{
+"id": 14,
+"ano": 2022,
+"materia": "Administrativo",
+"assunto": "Desfazimento do Ato Administrativo",
+"gabarito": "B",
+"url": "https://www.tecconcursos.com.br/questoes/1887471"
+},
+{
+"id": 15,
+"ano": 2022,
+"materia": "Administrativo",
+"assunto": "Administração Indireta",
+"gabarito": "C",
+"url": "https://www.tecconcursos.com.br/questoes/1887464"
+},
+{
+"id": 16,
+"ano": 2022,
+"materia": "Administrativo",
+"assunto": "Terceiro Setor (OS, OSCIP)",
+"gabarito": "C",
+"url": "https://www.tecconcursos.com.br/questoes/2097701"
+},
+{
+"id": 17,
+"ano": 2025,
+"materia": "Administrativo",
+"assunto": "Responsabilidade dos Agentes Públicos",
+"gabarito": "C",
+"url": "https://www.tecconcursos.com.br/questoes/3384097"
+},
+{
+"id": 18,
+"ano": 2020,
+"materia": "Administrativo",
+"assunto": "Responsabilidade dos Agentes Públicos",
+"gabarito": "A",
+"url": "https://www.tecconcursos.com.br/questoes/1130809"
+},
+{
+"id": 19,
+"ano": 2024,
+"materia": "Administrativo",
+"assunto": "Autorização, Permissão e Concessão",
+"gabarito": "D",
+"url": "https://www.tecconcursos.com.br/questoes/2851159"
+},
+{
+"id": 20,
+"ano": 2025,
+"materia": "Administrativo",
+"assunto": "Intervenção (Serviços Públicos)",
+"gabarito": "C",
+"url": "https://www.tecconcursos.com.br/questoes/3384080"
+},
+{
+"id": 21,
+"ano": 2020,
+"materia": "Administrativo",
+"assunto": "Intervenção (Serviços Públicos)",
+"gabarito": "D",
+"url": "https://www.tecconcursos.com.br/questoes/1130806"
+},
+{
+"id": 22,
+"ano": 2024,
+"materia": "Administrativo",
+"assunto": "PPP - Parceria Público-Privada",
+"gabarito": "A",
+"url": "https://www.tecconcursos.com.br/questoes/3238906"
+},
+{
+"id": 23,
+"ano": 2023,
+"materia": "Administrativo",
+"assunto": "PPP - Parceria Público-Privada",
+"gabarito": "D",
+"url": "https://www.tecconcursos.com.br/questoes/2322925"
+},
+{
+"id": 24,
+"ano": 2023,
+"materia": "Administrativo",
+"assunto": "PPP - Parceria Público-Privada",
+"gabarito": "A",
+"url": "https://www.tecconcursos.com.br/questoes/2715758"
+},
+{
+"id": 25,
+"ano": 2022,
+"materia": "Administrativo",
+"assunto": "PPP - Parceria Público-Privada",
+"gabarito": "A",
+"url": "https://www.tecconcursos.com.br/questoes/2097702"
+},
+{
+"id": 26,
+"ano": 2021,
+"materia": "Administrativo",
+"assunto": "PPP - Parceria Público-Privada",
+"gabarito": "C",
+"url": "https://www.tecconcursos.com.br/questoes/1626306"
+},
+{
+"id": 27,
+"ano": 2022,
+"materia": "Administrativo",
+"assunto": "Consórcios Públicos (Lei 11.107)",
+"gabarito": "B",
+"url": "https://www.tecconcursos.com.br/questoes/2097696"
+},
+{
+"id": 28,
+"ano": 2023,
+"materia": "Administrativo",
+"assunto": "Lei 13.460 - Direitos do Usuário",
+"gabarito": "A",
+"url": "https://www.tecconcursos.com.br/questoes/2322926"
+},
+{
+"id": 29,
+"ano": 2024,
+"materia": "Administrativo",
+"assunto": "Tribunais de Contas",
+"gabarito": "C",
+"url": "https://www.tecconcursos.com.br/questoes/2851118"
+},
+{
+"id": 30,
+"ano": 2024,
+"materia": "Administrativo",
+"assunto": "Tribunais de Contas",
+"gabarito": "D",
+"url": "https://www.tecconcursos.com.br/questoes/3022052"
+},
+{
+"id": 31,
+"ano": 2021,
+"materia": "Administrativo",
+"assunto": "Lei 12.846 - Processo Adm. de Responsabilização",
+"gabarito": "B",
+"url": "https://www.tecconcursos.com.br/questoes/1748870"
+},
+{
+"id": 32,
+"ano": 2023,
+"materia": "Administrativo",
+"assunto": "Acordo de Leniência (Lei 12.846)",
+"gabarito": "C",
+"url": "https://www.tecconcursos.com.br/questoes/2715757"
+},
+{
+"id": 33,
+"ano": 2024,
+"materia": "Administrativo",
+"assunto": "Responsabilização Judicial (Lei 12.846)",
+"gabarito": "D",
+"url": "https://www.tecconcursos.com.br/questoes/2851152"
+},
+{
+"id": 34,
+"ano": 2022,
+"materia": "Administrativo",
+"assunto": "Responsabilização Judicial (Lei 12.846)",
+"gabarito": "D",
+"url": "https://www.tecconcursos.com.br/questoes/2198120"
+},
+{
+"id": 35,
+"ano": 2025,
+"materia": "Administrativo",
+"assunto": "Características dos Bens Públicos",
+"gabarito": "D",
+"url": "https://www.tecconcursos.com.br/questoes/3636886"
+},
+{
+"id": 36,
+"ano": 2021,
+"materia": "Administrativo",
+"assunto": "Afetação e Desafetação (Bens Públicos)",
+"gabarito": "C",
+"url": "https://www.tecconcursos.com.br/questoes/1626317"
+},
+{
+"id": 37,
+"ano": 2021,
+"materia": "Administrativo",
+"assunto": "Aquisição de Bens pelo Estado",
+"gabarito": "A",
+"url": "https://www.tecconcursos.com.br/questoes/1748853"
+},
+{
+"id": 38,
+"ano": 2020,
+"materia": "Administrativo",
+"assunto": "Criação, Transformação e Extinção de Cargos",
+"gabarito": "A",
+"url": "https://www.tecconcursos.com.br/questoes/1130802"
+},
+{
+"id": 39,
+"ano": 2024,
+"materia": "Administrativo",
+"assunto": "Estabilidade e Estágio Probatório",
+"gabarito": "D",
+"url": "https://www.tecconcursos.com.br/questoes/2851162"
+},
+{
+"id": 40,
+"ano": 2022,
+"materia": "Administrativo",
+"assunto": "Remuneração (Subsídio, Teto, etc)",
+"gabarito": "C",
+"url": "https://www.tecconcursos.com.br/questoes/1887461"
+},
+{
+"id": 41,
+"ano": 2021,
+"materia": "Administrativo",
+"assunto": "Remuneração (Subsídio, Teto, etc)",
+"gabarito": "C",
+"url": "https://www.tecconcursos.com.br/questoes/1626303"
+},
+{
+"id": 42,
+"ano": 2024,
+"materia": "Administrativo",
+"assunto": "Formas de Provimento (Lei 8.112)",
+"gabarito": "C",
+"url": "https://www.tecconcursos.com.br/questoes/2851149"
+},
+{
+"id": 43,
+"ano": 2025,
+"materia": "Administrativo",
+"assunto": "Licenças e Afastamentos (Lei 8.112)",
+"gabarito": "A",
+"url": "https://www.tecconcursos.com.br/questoes/3737939"
+},
+{
+"id": 44,
+"ano": 2025,
+"materia": "Administrativo",
+"assunto": "Processo Administrativo Disciplinar",
+"gabarito": "D",
+"url": "https://www.tecconcursos.com.br/questoes/3384043"
+},
+{
+"id": 45,
+"ano": 2024,
+"materia": "Administrativo",
+"assunto": "Processo Administrativo Disciplinar",
+"gabarito": "B",
+"url": "https://www.tecconcursos.com.br/questoes/2851154"
+},
+{
+"id": 46,
+"ano": 2024,
+"materia": "Administrativo",
+"assunto": "Processo Administrativo Disciplinar",
+"gabarito": "A",
+"url": "https://www.tecconcursos.com.br/questoes/3238900"
+},
+{
+"id": 47,
+"ano": 2022,
+"materia": "Administrativo",
+"assunto": "Processo Administrativo Disciplinar",
+"gabarito": "A",
+"url": "https://www.tecconcursos.com.br/questoes/2097698"
+},
+{
+"id": 48,
+"ano": 2021,
+"materia": "Administrativo",
+"assunto": "Processo Administrativo Disciplinar",
+"gabarito": "D",
+"url": "https://www.tecconcursos.com.br/questoes/1626305"
+},
+{
+"id": 49,
+"ano": 2025,
+"materia": "Administrativo",
+"assunto": "Lei 8.429 - Disposições Gerais",
+"gabarito": "A",
+"url": "https://www.tecconcursos.com.br/questoes/3384090"
+},
+{
+"id": 50,
+"ano": 2022,
+"materia": "Administrativo",
+"assunto": "Lei 8.429 - Disposições Gerais",
+"gabarito": "B",
+"url": "https://www.tecconcursos.com.br/questoes/2097704"
+},
+{
+"id": 51,
+"ano": 2025,
+"materia": "Administrativo",
+"assunto": "Atos de Improbidade (arts 9-11)",
+"gabarito": "C",
+"url": "https://www.tecconcursos.com.br/questoes/3636907"
+},
+{
+"id": 52,
+"ano": 2023,
+"materia": "Administrativo",
+"assunto": "Atos de Improbidade (arts 9-11)",
+"gabarito": "A",
+"url": "https://www.tecconcursos.com.br/questoes/2490660"
+},
+{
+"id": 53,
+"ano": 2023,
+"materia": "Administrativo",
+"assunto": "Declaração de Bens (art 13)",
+"gabarito": "A",
+"url": "https://www.tecconcursos.com.br/questoes/2322921"
+},
+{
+"id": 54,
+"ano": 2026,
+"materia": "Administrativo",
+"assunto": "Procedimento Adm. e Processo Judicial (14-18A)",
+"gabarito": "B",
+"url": "https://www.tecconcursos.com.br/questoes/3959117"
+},
+{
+"id": 55,
+"ano": 2025,
+"materia": "Administrativo",
+"assunto": "Procedimento Adm. e Processo Judicial (14-18A)",
+"gabarito": "A",
+"url": "https://www.tecconcursos.com.br/questoes/3737938"
+},
+{
+"id": 56,
+"ano": 2022,
+"materia": "Administrativo",
+"assunto": "Procedimento Adm. e Processo Judicial (14-18A)",
+"gabarito": "D",
+"url": "https://www.tecconcursos.com.br/questoes/2198123"
+},
+{
+"id": 57,
+"ano": 2023,
+"materia": "Administrativo",
+"assunto": "Trâmite do Processo (Lei 9.784)",
+"gabarito": "D",
+"url": "https://www.tecconcursos.com.br/questoes/2322929"
+},
+{
+"id": 58,
+"ano": 2026,
+"materia": "Administrativo",
+"assunto": "Da Competência (Lei 9.784)",
+"gabarito": "A",
+"url": "https://www.tecconcursos.com.br/questoes/3959119"
+},
+{
+"id": 59,
+"ano": 2023,
+"materia": "Administrativo",
+"assunto": "Da Competência (Lei 9.784)",
+"gabarito": "D",
+"url": "https://www.tecconcursos.com.br/questoes/2490661"
+},
+{
+"id": 60,
+"ano": 2024,
+"materia": "Administrativo",
+"assunto": "Anulação, Revogação e Convalidação",
+"gabarito": "C",
+"url": "https://www.tecconcursos.com.br/questoes/3238899"
+},
+{
+"id": 61,
+"ano": 2022,
+"materia": "Administrativo",
+"assunto": "Anulação, Revogação e Convalidação",
+"gabarito": "B",
+"url": "https://www.tecconcursos.com.br/questoes/2198121"
+},
+{
+"id": 62,
+"ano": 2023,
+"materia": "Administrativo",
+"assunto": "Recurso Administrativo e Revisão",
+"gabarito": "D",
+"url": "https://www.tecconcursos.com.br/questoes/2715754"
+},
+{
+"id": 63,
+"ano": 2023,
+"materia": "Administrativo",
+"assunto": "Modalidades de Licitação (Lei 14.133)",
+"gabarito": "D",
+"url": "https://www.tecconcursos.com.br/questoes/2490656"
+},
+{
+"id": 64,
+"ano": 2022,
+"materia": "Administrativo",
+"assunto": "Modalidades de Licitação (Lei 14.133)",
+"gabarito": "A",
+"url": "https://www.tecconcursos.com.br/questoes/2097699"
+},
+{
+"id": 65,
+"ano": 2025,
+"materia": "Administrativo",
+"assunto": "Contratação Direta, Inexigibilidade e Dispensa",
+"gabarito": "D",
+"url": "https://www.tecconcursos.com.br/questoes/3737941"
+},
+{
+"id": 66,
+"ano": 2024,
+"materia": "Administrativo",
+"assunto": "Contratação Direta, Inexigibilidade e Dispensa",
+"gabarito": "A",
+"url": "https://www.tecconcursos.com.br/questoes/3022050"
+},
+{
+"id": 67,
+"ano": 2023,
+"materia": "Administrativo",
+"assunto": "Contratação Direta, Inexigibilidade e Dispensa",
+"gabarito": "D",
+"url": "https://www.tecconcursos.com.br/questoes/2715756"
+},
+{
+"id": 68,
+"ano": 2023,
+"materia": "Administrativo",
+"assunto": "Alienações (arts 76-77)",
+"gabarito": "A",
+"url": "https://www.tecconcursos.com.br/questoes/2715755"
+},
+{
+"id": 69,
+"ano": 2024,
+"materia": "Administrativo",
+"assunto": "Execução dos Contratos",
+"gabarito": "D",
+"url": "https://www.tecconcursos.com.br/questoes/3238907"
+},
+{
+"id": 70,
+"ano": 2023,
+"materia": "Administrativo",
+"assunto": "Alteração dos Contratos e dos Preços",
+"gabarito": "D",
+"url": "https://www.tecconcursos.com.br/questoes/2322917"
+},
+{
+"id": 71,
+"ano": 2025,
+"materia": "Administrativo",
+"assunto": "Hipóteses de Extinção dos Contratos",
+"gabarito": "D",
+"url": "https://www.tecconcursos.com.br/questoes/3737937"
+},
+{
+"id": 72,
+"ano": 2025,
+"materia": "Administrativo",
+"assunto": "Meios Alternativos de Resolução de Controvérsias",
+"gabarito": "A",
+"url": "https://www.tecconcursos.com.br/questoes/3636897"
+},
+{
+"id": 73,
+"ano": 2026,
+"materia": "Administrativo",
+"assunto": "Impugnações, Esclarecimentos e Recursos (164-168)",
+"gabarito": "D",
+"url": "https://www.tecconcursos.com.br/questoes/3959112"
+},
+{
+"id": 74,
+"ano": 2021,
+"materia": "Administrativo",
+"assunto": "Lei 13.303 - Das Licitações",
+"gabarito": "C",
+"url": "https://www.tecconcursos.com.br/questoes/1748857"
+},
+{
+"id": 75,
+"ano": 2023,
+"materia": "Administrativo",
+"assunto": "Servidões Administrativas",
+"gabarito": "A",
+"url": "https://www.tecconcursos.com.br/questoes/2490658"
+},
+{
+"id": 76,
+"ano": 2022,
+"materia": "Administrativo",
+"assunto": "Requisição da Propriedade Privada",
+"gabarito": "D",
+"url": "https://www.tecconcursos.com.br/questoes/1887458"
+},
+{
+"id": 77,
+"ano": 2022,
+"materia": "Administrativo",
+"assunto": "Ocupação Provisória",
+"gabarito": "C",
+"url": "https://www.tecconcursos.com.br/questoes/2198122"
+},
+{
+"id": 78,
+"ano": 2024,
+"materia": "Administrativo",
+"assunto": "Limitações Administrativas",
+"gabarito": "B",
+"url": "https://www.tecconcursos.com.br/questoes/3238895"
+},
+{
+"id": 79,
+"ano": 2025,
+"materia": "Administrativo",
+"assunto": "Tombamento - Decreto-Lei 25/1937",
+"gabarito": "A",
+"url": "https://www.tecconcursos.com.br/questoes/3384083"
+},
+{
+"id": 80,
+"ano": 2026,
+"materia": "Administrativo",
+"assunto": "Desapropriação",
+"gabarito": "A",
+"url": "https://www.tecconcursos.com.br/questoes/3959115"
+},
+{
+"id": 81,
+"ano": 2025,
+"materia": "Administrativo",
+"assunto": "Desapropriação",
+"gabarito": "A",
+"url": "https://www.tecconcursos.com.br/questoes/3636893"
+},
+{
+"id": 82,
+"ano": 2024,
+"materia": "Administrativo",
+"assunto": "Desapropriação",
+"gabarito": "C",
+"url": "https://www.tecconcursos.com.br/questoes/3022053"
+},
+{
+"id": 83,
+"ano": 2022,
+"materia": "Administrativo",
+"assunto": "Desapropriação",
+"gabarito": "A",
+"url": "https://www.tecconcursos.com.br/questoes/2198119"
+},
+{
+"id": 84,
+"ano": 2021,
+"materia": "Administrativo",
+"assunto": "Desapropriação",
+"gabarito": "D",
+"url": "https://www.tecconcursos.com.br/questoes/1626311"
+},
+{
+"id": 85,
+"ano": 2021,
+"materia": "Administrativo",
+"assunto": "Desapropriação",
+"gabarito": "B",
+"url": "https://www.tecconcursos.com.br/questoes/1748862"
+},
+{
+"id": 86,
+"ano": 2020,
+"materia": "Administrativo",
+"assunto": "Desapropriação",
+"gabarito": "B",
+"url": "https://www.tecconcursos.com.br/questoes/1130807"
+},
+{
+"id": 87,
+"ano": 2023,
+"materia": "Administrativo",
+"assunto": "Lei 12.527 - Acesso à Informação",
+"gabarito": "D",
+"url": "https://www.tecconcursos.com.br/questoes/2490659"
+},
+{
+"id": 88,
+"ano": 2024,
+"materia": "Administrativo",
+"assunto": "Jurisprudência - Concurso Público",
+"gabarito": "C",
+"url": "https://www.tecconcursos.com.br/questoes/3022045"
+},
+{
+"id": 89,
+"ano": 2023,
+"materia": "Administrativo",
+"assunto": "Jurisprudência - Resp. Civil do Estado",
+"gabarito": "D",
+"url": "https://www.tecconcursos.com.br/questoes/2322928"
+},
+{
+"id": 90,
+"ano": 2022,
+"materia": "Administrativo",
+"assunto": "Jurisprudência - Resp. Civil do Estado",
+"gabarito": "C",
+"url": "https://www.tecconcursos.com.br/questoes/1887455"
+},
+{
+"id": 91,
+"ano": 2023,
+"materia": "Ambiental",
+"assunto": "Princípios do Direito Ambiental",
+"gabarito": "B",
+"url": "https://www.tecconcursos.com.br/questoes/2715759"
+},
+{
+"id": 92,
+"ano": 2021,
+"materia": "Ambiental",
+"assunto": "Princípios do Direito Ambiental",
+"gabarito": "B",
+"url": "https://www.tecconcursos.com.br/questoes/1748878"
+},
+{
+"id": 93,
+"ano": 2023,
+"materia": "Ambiental",
+"assunto": "Competências Constitucionais em Matéria Ambiental",
+"gabarito": "C",
+"url": "https://www.tecconcursos.com.br/questoes/2490667"
+},
+{
+"id": 94,
+"ano": 2021,
+"materia": "Ambiental",
+"assunto": "Competências Constitucionais em Matéria Ambiental",
+"gabarito": "D",
+"url": "https://www.tecconcursos.com.br/questoes/1626322"
+},
+{
+"id": 95,
+"ano": 2025,
+"materia": "Ambiental",
+"assunto": "Meio Ambiente (art. 225 CF)",
+"gabarito": "D",
+"url": "https://www.tecconcursos.com.br/questoes/3384101"
+},
+{
+"id": 96,
+"ano": 2022,
+"materia": "Ambiental",
+"assunto": "Outros Temas de Direito Ambiental Constitucional",
+"gabarito": "B",
+"url": "https://www.tecconcursos.com.br/questoes/1887478"
+},
+{
+"id": 97,
+"ano": 2025,
+"materia": "Ambiental",
+"assunto": "LC 140/2011 - Cooperação",
+"gabarito": "B",
+"url": "https://www.tecconcursos.com.br/questoes/3384108"
+},
+{
+"id": 98,
+"ano": 2022,
+"materia": "Ambiental",
+"assunto": "LC 140/2011 - Cooperação",
+"gabarito": "B",
+"url": "https://www.tecconcursos.com.br/questoes/2097705"
+},
+{
+"id": 99,
+"ano": 2021,
+"materia": "Ambiental",
+"assunto": "LC 140/2011 - Cooperação",
+"gabarito": "A",
+"url": "https://www.tecconcursos.com.br/questoes/1626319"
+},
+{
+"id": 100,
+"ano": 2025,
+"materia": "Ambiental",
+"assunto": "Resolução CONAMA 237/1997 - Licenciamento",
+"gabarito": "C",
+"url": "https://www.tecconcursos.com.br/questoes/3737944"
+},
+{
+"id": 101,
+"ano": 2024,
+"materia": "Ambiental",
+"assunto": "Resolução CONAMA 237/1997 - Licenciamento",
+"gabarito": "A",
+"url": "https://www.tecconcursos.com.br/questoes/2851166"
+},
+{
+"id": 102,
+"ano": 2024,
+"materia": "Ambiental",
+"assunto": "Resolução CONAMA 237/1997 - Licenciamento",
+"gabarito": "D",
+"url": "https://www.tecconcursos.com.br/questoes/3022055"
+},
+{
+"id": 103,
+"ano": 2020,
+"materia": "Ambiental",
+"assunto": "Resolução CONAMA 237/1997 - Licenciamento",
+"gabarito": "D",
+"url": "https://www.tecconcursos.com.br/questoes/1130814"
+},
+{
+"id": 104,
+"ano": 2026,
+"materia": "Ambiental",
+"assunto": "Categorias de Unidades de Conservação",
+"gabarito": "A",
+"url": "https://www.tecconcursos.com.br/questoes/3959122"
+},
+{
+"id": 105,
+"ano": 2021,
+"materia": "Ambiental",
+"assunto": "Categorias de Unidades de Conservação",
+"gabarito": "B",
+"url": "https://www.tecconcursos.com.br/questoes/1748881"
+},
+{
+"id": 106,
+"ano": 2024,
+"materia": "Ambiental",
+"assunto": "Criação e Gestão das UCs",
+"gabarito": "C",
+"url": "https://www.tecconcursos.com.br/questoes/2851170"
+},
+{
+"id": 107,
+"ano": 2022,
+"materia": "Ambiental",
+"assunto": "Criação e Gestão das UCs",
+"gabarito": "B",
+"url": "https://www.tecconcursos.com.br/questoes/2198124"
+},
+{
+"id": 108,
+"ano": 2024,
+"materia": "Ambiental",
+"assunto": "Código Florestal - Disposições Gerais",
+"gabarito": "C",
+"url": "https://www.tecconcursos.com.br/questoes/3238911"
+},
+{
+"id": 109,
+"ano": 2026,
+"materia": "Ambiental",
+"assunto": "Lei 9.433/1997 - PNRH",
+"gabarito": "C",
+"url": "https://www.tecconcursos.com.br/questoes/3959120"
+},
+{
+"id": 110,
+"ano": 2024,
+"materia": "Ambiental",
+"assunto": "Lei 9.433/1997 - PNRH",
+"gabarito": "C",
+"url": "https://www.tecconcursos.com.br/questoes/3022054"
+},
+{
+"id": 111,
+"ano": 2023,
+"materia": "Ambiental",
+"assunto": "Lei 9.433/1997 - PNRH",
+"gabarito": "D",
+"url": "https://www.tecconcursos.com.br/questoes/2490664"
+},
+{
+"id": 112,
+"ano": 2023,
+"materia": "Ambiental",
+"assunto": "Lei 12.305/2010 - Política Nac. de Resíduos Sólidos",
+"gabarito": "A",
+"url": "https://www.tecconcursos.com.br/questoes/2322931"
+},
+{
+"id": 113,
+"ano": 2025,
+"materia": "Ambiental",
+"assunto": "Responsabilidade Civil Ambiental",
+"gabarito": "D",
+"url": "https://www.tecconcursos.com.br/questoes/3737943"
+},
+{
+"id": 114,
+"ano": 2022,
+"materia": "Ambiental",
+"assunto": "Responsabilidade Civil Ambiental",
+"gabarito": "D",
+"url": "https://www.tecconcursos.com.br/questoes/2097706"
+},
+{
+"id": 115,
+"ano": 2025,
+"materia": "Ambiental",
+"assunto": "Assuntos Diversos de Direito Ambiental",
+"gabarito": "B",
+"url": "https://www.tecconcursos.com.br/questoes/3636915"
+},
+{
+"id": 116,
+"ano": 2026,
+"materia": "Civil",
+"assunto": "Da Personalidade e da Capacidade",
+"gabarito": "A",
+"url": "https://www.tecconcursos.com.br/questoes/3959123"
+},
+{
+"id": 117,
+"ano": 2020,
+"materia": "Civil",
+"assunto": "Da Personalidade e da Capacidade",
+"gabarito": "C",
+"url": "https://www.tecconcursos.com.br/questoes/1130824"
+},
+{
+"id": 118,
+"ano": 2023,
+"materia": "Civil",
+"assunto": "Das Associações",
+"gabarito": "C",
+"url": "https://www.tecconcursos.com.br/questoes/2322942"
+},
+{
+"id": 119,
+"ano": 2022,
+"materia": "Civil",
+"assunto": "Das Associações",
+"gabarito": "B",
+"url": "https://www.tecconcursos.com.br/questoes/2097717"
+},
+{
+"id": 120,
+"ano": 2022,
+"materia": "Civil",
+"assunto": "Desconsideração da Personalidade Jurídica",
+"gabarito": "D",
+"url": "https://www.tecconcursos.com.br/questoes/2097717"
+},
+{
+"id": 121,
+"ano": 2021,
+"materia": "Civil",
+"assunto": "Desconsideração da Personalidade Jurídica",
+"gabarito": "C",
+"url": "https://www.tecconcursos.com.br/questoes/1626358"
+},
+{
+"id": 122,
+"ano": 2024,
+"materia": "Civil",
+"assunto": "Classificação dos Bens",
+"gabarito": "C",
+"url": "https://www.tecconcursos.com.br/questoes/2851184"
+},
+{
+"id": 123,
+"ano": 2021,
+"materia": "Civil",
+"assunto": "Classificação dos Bens",
+"gabarito": "C",
+"url": "https://www.tecconcursos.com.br/questoes/1749021"
+},
+{
+"id": 124,
+"ano": 2026,
+"materia": "Civil",
+"assunto": "Negócio Jurídico - Disposições Gerais",
+"gabarito": "B",
+"url": "https://www.tecconcursos.com.br/questoes/3959127"
+},
+{
+"id": 125,
+"ano": 2024,
+"materia": "Civil",
+"assunto": "Negócio Jurídico - Disposições Gerais",
+"gabarito": "D",
+"url": "https://www.tecconcursos.com.br/questoes/3022056"
+},
+{
+"id": 126,
+"ano": 2025,
+"materia": "Civil",
+"assunto": "Condição, Termo e Encargo",
+"gabarito": "C",
+"url": "https://www.tecconcursos.com.br/questoes/3737945"
+},
+{
+"id": 127,
+"ano": 2024,
+"materia": "Civil",
+"assunto": "Defeitos/Vícios do Negócio Jurídico",
+"gabarito": "C",
+"url": "https://www.tecconcursos.com.br/questoes/2851176"
+},
+{
+"id": 128,
+"ano": 2020,
+"materia": "Civil",
+"assunto": "Defeitos/Vícios do Negócio Jurídico",
+"gabarito": "A",
+"url": "https://www.tecconcursos.com.br/questoes/1130816"
+},
+{
+"id": 129,
+"ano": 2025,
+"materia": "Civil",
+"assunto": "Invalidade do Negócio Jurídico",
+"gabarito": "C",
+"url": "https://www.tecconcursos.com.br/questoes/3636938"
+},
+{
+"id": 130,
+"ano": 2024,
+"materia": "Civil",
+"assunto": "Dos Atos Ilícitos",
+"gabarito": "D",
+"url": "https://www.tecconcursos.com.br/questoes/3238916"
+},
+{
+"id": 131,
+"ano": 2021,
+"materia": "Civil",
+"assunto": "Dos Atos Ilícitos",
+"gabarito": "A",
+"url": "https://www.tecconcursos.com.br/questoes/1749037"
+},
+{
+"id": 132,
+"ano": 2025,
+"materia": "Civil",
+"assunto": "Prescrição e Decadência",
+"gabarito": "B",
+"url": "https://www.tecconcursos.com.br/questoes/3384122"
+},
+{
+"id": 133,
+"ano": 2023,
+"materia": "Civil",
+"assunto": "Prescrição e Decadência",
+"gabarito": "B",
+"url": "https://www.tecconcursos.com.br/questoes/2715763"
+},
+{
+"id": 134,
+"ano": 2022,
+"materia": "Civil",
+"assunto": "Prescrição e Decadência",
+"gabarito": "B",
+"url": "https://www.tecconcursos.com.br/questoes/1887493"
+},
+{
+"id": 135,
+"ano": 2023,
+"materia": "Civil",
+"assunto": "Das Obrigações de Dar",
+"gabarito": "B",
+"url": "https://www.tecconcursos.com.br/questoes/2322945"
+},
+{
+"id": 136,
+"ano": 2024,
+"materia": "Civil",
+"assunto": "Obrigações Divisíveis e Indivisíveis",
+"gabarito": "B",
+"url": "https://www.tecconcursos.com.br/questoes/3238919"
+},
+{
+"id": 137,
+"ano": 2025,
+"materia": "Civil",
+"assunto": "Das Obrigações Solidárias",
+"gabarito": "D",
+"url": "https://www.tecconcursos.com.br/questoes/3737947"
+},
+{
+"id": 138,
+"ano": 2023,
+"materia": "Civil",
+"assunto": "Das Obrigações Solidárias",
+"gabarito": "B",
+"url": "https://www.tecconcursos.com.br/questoes/2490675"
+},
+{
+"id": 139,
+"ano": 2022,
+"materia": "Civil",
+"assunto": "Das Obrigações Solidárias",
+"gabarito": "B",
+"url": "https://www.tecconcursos.com.br/questoes/2198130"
+},
+{
+"id": 140,
+"ano": 2024,
+"materia": "Civil",
+"assunto": "Da Cessão de Crédito",
+"gabarito": "B",
+"url": "https://www.tecconcursos.com.br/questoes/3022057"
+},
+{
+"id": 141,
+"ano": 2020,
+"materia": "Civil",
+"assunto": "Do Pagamento",
+"gabarito": "B",
+"url": "https://www.tecconcursos.com.br/questoes/1130820"
+},
+{
+"id": 142,
+"ano": 2023,
+"materia": "Civil",
+"assunto": "Da Mora",
+"gabarito": "D",
+"url": "https://www.tecconcursos.com.br/questoes/2715762"
+},
+{
+"id": 143,
+"ano": 2021,
+"materia": "Civil",
+"assunto": "Da Mora",
+"gabarito": "A",
+"url": "https://www.tecconcursos.com.br/questoes/1626334"
+},
+{
+"id": 144,
+"ano": 2025,
+"materia": "Civil",
+"assunto": "Da Cláusula Penal",
+"gabarito": "A",
+"url": "https://www.tecconcursos.com.br/questoes/3384134"
+},
+{
+"id": 145,
+"ano": 2023,
+"materia": "Civil",
+"assunto": "Das Arras ou Sinal",
+"gabarito": "C",
+"url": "https://www.tecconcursos.com.br/questoes/2322940"
+},
+{
+"id": 146,
+"ano": 2021,
+"materia": "Civil",
+"assunto": "Das Arras ou Sinal",
+"gabarito": "A",
+"url": "https://www.tecconcursos.com.br/questoes/1749024"
+},
+{
+"id": 147,
+"ano": 2022,
+"materia": "Civil",
+"assunto": "Preliminares e Formação dos Contratos",
+"gabarito": "B",
+"url": "https://www.tecconcursos.com.br/questoes/1887505"
+},
+{
+"id": 148,
+"ano": 2024,
+"materia": "Civil",
+"assunto": "Dos Vícios Redibitórios",
+"gabarito": "C",
+"url": "https://www.tecconcursos.com.br/questoes/2851178"
+},
+{
+"id": 149,
+"ano": 2022,
+"materia": "Civil",
+"assunto": "Exceção do Contrato Não Cumprido",
+"gabarito": "A",
+"url": "https://www.tecconcursos.com.br/questoes/1887481"
+},
+{
+"id": 150,
+"ano": 2026,
+"materia": "Civil",
+"assunto": "Da Compra e Venda",
+"gabarito": "A",
+"url": "https://www.tecconcursos.com.br/questoes/3959128"
+},
+{
+"id": 151,
+"ano": 2023,
+"materia": "Civil",
+"assunto": "Da Compra e Venda",
+"gabarito": "A",
+"url": "https://www.tecconcursos.com.br/questoes/2322941"
+},
+{
+"id": 152,
+"ano": 2022,
+"materia": "Civil",
+"assunto": "Da Compra e Venda",
+"gabarito": "B",
+"url": "https://www.tecconcursos.com.br/questoes/1887485"
+},
+{
+"id": 153,
+"ano": 2025,
+"materia": "Civil",
+"assunto": "Da Doação",
+"gabarito": "A",
+"url": "https://www.tecconcursos.com.br/questoes/3737951"
+},
+{
+"id": 154,
+"ano": 2023,
+"materia": "Civil",
+"assunto": "Da Doação",
+"gabarito": "C",
+"url": "https://www.tecconcursos.com.br/questoes/2322936"
+},
+{
+"id": 155,
+"ano": 2022,
+"materia": "Civil",
+"assunto": "Da Doação",
+"gabarito": "C",
+"url": "https://www.tecconcursos.com.br/questoes/1887479"
+},
+{
+"id": 156,
+"ano": 2021,
+"materia": "Civil",
+"assunto": "Da Doação",
+"gabarito": "C",
+"url": "https://www.tecconcursos.com.br/questoes/1626337"
+},
+{
+"id": 157,
+"ano": 2020,
+"materia": "Civil",
+"assunto": "Da Doação",
+"gabarito": "D",
+"url": "https://www.tecconcursos.com.br/questoes/1130822"
+},
+{
+"id": 158,
+"ano": 2021,
+"materia": "Civil",
+"assunto": "Do Empréstimo (Comodato/Mútuo)",
+"gabarito": "C",
+"url": "https://www.tecconcursos.com.br/questoes/1749027"
+},
+{
+"id": 159,
+"ano": 2026,
+"materia": "Civil",
+"assunto": "Do Mandato",
+"gabarito": "B",
+"url": "https://www.tecconcursos.com.br/questoes/3959130"
+},
+{
+"id": 160,
+"ano": 2021,
+"materia": "Civil",
+"assunto": "Da Corretagem",
+"gabarito": "A",
+"url": "https://www.tecconcursos.com.br/questoes/1626329"
+},
+{
+"id": 161,
+"ano": 2024,
+"materia": "Civil",
+"assunto": "Da Fiança",
+"gabarito": "D",
+"url": "https://www.tecconcursos.com.br/questoes/3022060"
+},
+{
+"id": 162,
+"ano": 2023,
+"materia": "Civil",
+"assunto": "Da Fiança",
+"gabarito": "A",
+"url": "https://www.tecconcursos.com.br/questoes/2490676"
+},
+{
+"id": 163,
+"ano": 2023,
+"materia": "Civil",
+"assunto": "Do Pagamento Indevido",
+"gabarito": "D",
+"url": "https://www.tecconcursos.com.br/questoes/2715765"
+},
+{
+"id": 164,
+"ano": 2025,
+"materia": "Civil",
+"assunto": "Da Responsabilidade Civil",
+"gabarito": "C",
+"url": "https://www.tecconcursos.com.br/questoes/3384146"
+},
+{
+"id": 165,
+"ano": 2023,
+"materia": "Civil",
+"assunto": "Da Responsabilidade Civil",
+"gabarito": "B",
+"url": "https://www.tecconcursos.com.br/questoes/2322938"
+},
+{
+"id": 166,
+"ano": 2022,
+"materia": "Civil",
+"assunto": "Da Responsabilidade Civil",
+"gabarito": "B",
+"url": "https://www.tecconcursos.com.br/questoes/2198129"
+},
+{
+"id": 167,
+"ano": 2022,
+"materia": "Civil",
+"assunto": "Da Responsabilidade Civil",
+"gabarito": "D",
+"url": "https://www.tecconcursos.com.br/questoes/2198132"
+},
+{
+"id": 168,
+"ano": 2021,
+"materia": "Civil",
+"assunto": "Da Responsabilidade Civil",
+"gabarito": "A",
+"url": "https://www.tecconcursos.com.br/questoes/1626339"
+},
+{
+"id": 169,
+"ano": 2021,
+"materia": "Civil",
+"assunto": "Da Responsabilidade Civil",
+"gabarito": "D",
+"url": "https://www.tecconcursos.com.br/questoes/1749028"
+},
+{
+"id": 170,
+"ano": 2022,
+"materia": "Civil",
+"assunto": "Disposições Gerais dos Direitos Reais",
+"gabarito": "C",
+"url": "https://www.tecconcursos.com.br/questoes/2198127"
+},
+{
+"id": 171,
+"ano": 2025,
+"materia": "Civil",
+"assunto": "Usucapião, Acessão e Registro",
+"gabarito": "B",
+"url": "https://www.tecconcursos.com.br/questoes/3384154"
+},
+{
+"id": 172,
+"ano": 2021,
+"materia": "Civil",
+"assunto": "Usucapião, Acessão e Registro",
+"gabarito": "C",
+"url": "https://www.tecconcursos.com.br/questoes/1626324"
+},
+{
+"id": 173,
+"ano": 2024,
+"materia": "Civil",
+"assunto": "Dos Direitos de Vizinhança",
+"gabarito": "C",
+"url": "https://www.tecconcursos.com.br/questoes/3238921"
+},
+{
+"id": 174,
+"ano": 2023,
+"materia": "Civil",
+"assunto": "Dos Direitos de Vizinhança",
+"gabarito": "D",
+"url": "https://www.tecconcursos.com.br/questoes/2490673"
+},
+{
+"id": 175,
+"ano": 2022,
+"materia": "Civil",
+"assunto": "Do Condomínio Geral",
+"gabarito": "D",
+"url": "https://www.tecconcursos.com.br/questoes/2198126"
+},
+{
+"id": 176,
+"ano": 2021,
+"materia": "Civil",
+"assunto": "Condomínio em Multipropriedade",
+"gabarito": "C",
+"url": "https://www.tecconcursos.com.br/questoes/1626327"
+},
+{
+"id": 177,
+"ano": 2024,
+"materia": "Civil",
+"assunto": "Da Superfície",
+"gabarito": "D",
+"url": "https://www.tecconcursos.com.br/questoes/3022061"
+},
+{
+"id": 178,
+"ano": 2025,
+"materia": "Civil",
+"assunto": "Das Servidões",
+"gabarito": "D",
+"url": "https://www.tecconcursos.com.br/questoes/3737956"
+},
+{
+"id": 179,
+"ano": 2024,
+"materia": "Civil",
+"assunto": "Do Usufruto",
+"gabarito": "D",
+"url": "https://www.tecconcursos.com.br/questoes/3238920"
+},
+{
+"id": 180,
+"ano": 2023,
+"materia": "Civil",
+"assunto": "Da Hipoteca",
+"gabarito": "D",
+"url": "https://www.tecconcursos.com.br/questoes/2715938"
+},
+{
+"id": 181,
+"ano": 2025,
+"materia": "Civil",
+"assunto": "Da Laje",
+"gabarito": "B",
+"url": "https://www.tecconcursos.com.br/questoes/3636963"
+},
+{
+"id": 182,
+"ano": 2022,
+"materia": "Civil",
+"assunto": "Da Laje",
+"gabarito": "D",
+"url": "https://www.tecconcursos.com.br/questoes/2097714"
+},
+{
+"id": 183,
+"ano": 2024,
+"materia": "Civil",
+"assunto": "Do Casamento",
+"gabarito": "B",
+"url": "https://www.tecconcursos.com.br/questoes/2851173"
+},
+{
+"id": 184,
+"ano": 2022,
+"materia": "Civil",
+"assunto": "Do Casamento",
+"gabarito": "B",
+"url": "https://www.tecconcursos.com.br/questoes/1887495"
+},
+{
+"id": 185,
+"ano": 2024,
+"materia": "Civil",
+"assunto": "Da Proteção da Pessoa dos Filhos",
+"gabarito": "A",
+"url": "https://www.tecconcursos.com.br/questoes/2851185"
+},
+{
+"id": 186,
+"ano": 2023,
+"materia": "Civil",
+"assunto": "Da Proteção da Pessoa dos Filhos",
+"gabarito": "C",
+"url": "https://www.tecconcursos.com.br/questoes/2715761"
+},
+{
+"id": 187,
+"ano": 2022,
+"materia": "Civil",
+"assunto": "Da Proteção da Pessoa dos Filhos",
+"gabarito": "B",
+"url": "https://www.tecconcursos.com.br/questoes/2198128"
+},
+{
+"id": 188,
+"ano": 2025,
+"materia": "Civil",
+"assunto": "Das Relações de Parentesco",
+"gabarito": "D",
+"url": "https://www.tecconcursos.com.br/questoes/3636958"
+},
+{
+"id": 189,
+"ano": 2024,
+"materia": "Civil",
+"assunto": "Das Relações de Parentesco",
+"gabarito": "A",
+"url": "https://www.tecconcursos.com.br/questoes/3022059"
+},
+{
+"id": 190,
+"ano": 2024,
+"materia": "Civil",
+"assunto": "Das Relações de Parentesco",
+"gabarito": "C",
+"url": "https://www.tecconcursos.com.br/questoes/3238918"
+},
+{
+"id": 191,
+"ano": 2026,
+"materia": "Civil",
+"assunto": "Do Regime de Bens entre Cônjuges",
+"gabarito": "D",
+"url": "https://www.tecconcursos.com.br/questoes/3959124"
+},
+{
+"id": 192,
+"ano": 2023,
+"materia": "Civil",
+"assunto": "Do Regime de Bens entre Cônjuges",
+"gabarito": "B",
+"url": "https://www.tecconcursos.com.br/questoes/2322939"
+},
+{
+"id": 193,
+"ano": 2020,
+"materia": "Civil",
+"assunto": "Do Regime de Bens entre Cônjuges",
+"gabarito": "C",
+"url": "https://www.tecconcursos.com.br/questoes/1130827"
+},
+{
+"id": 194,
+"ano": 2023,
+"materia": "Civil",
+"assunto": "Dos Alimentos",
+"gabarito": "D",
+"url": "https://www.tecconcursos.com.br/questoes/2490668"
+},
+{
+"id": 195,
+"ano": 2021,
+"materia": "Civil",
+"assunto": "Dos Alimentos",
+"gabarito": "C",
+"url": "https://www.tecconcursos.com.br/questoes/1748892"
+},
+{
+"id": 196,
+"ano": 2020,
+"materia": "Civil",
+"assunto": "Dos Alimentos",
+"gabarito": "C",
+"url": "https://www.tecconcursos.com.br/questoes/1130818"
+},
+{
+"id": 197,
+"ano": 2025,
+"materia": "Civil",
+"assunto": "Da Tutela",
+"gabarito": "D",
+"url": "https://www.tecconcursos.com.br/questoes/3636923"
+},
+{
+"id": 198,
+"ano": 2023,
+"materia": "Civil",
+"assunto": "Da Curatela",
+"gabarito": "C",
+"url": "https://www.tecconcursos.com.br/questoes/2715936"
+},
+{
+"id": 199,
+"ano": 2022,
+"materia": "Civil",
+"assunto": "Da Tomada de Decisão Apoiada",
+"gabarito": "C",
+"url": "https://www.tecconcursos.com.br/questoes/2097711"
+},
+{
+"id": 200,
+"ano": 2022,
+"materia": "Civil",
+"assunto": "Da Vocação Hereditária",
+"gabarito": "C",
+"url": "https://www.tecconcursos.com.br/questoes/2097722"
+},
+{
+"id": 501,
+"ano": 2023,
+"materia": "Empresarial",
+"assunto": "Do Nome Empresarial (arts. 1.155 a 1.168 do CC)",
+"gabarito": "A",
+"url": "https://www.tecconcursos.com.br/questoes/2490687"
+},
+{
+"id": 502,
+"ano": 2022,
+"materia": "Empresarial",
+"assunto": "Do Nome Empresarial (arts. 1.155 a 1.168 do CC)",
+"gabarito": "A",
+"url": "https://www.tecconcursos.com.br/questoes/2198140"
+},
+{
+"id": 503,
+"ano": 2024,
+"materia": "Empresarial",
+"assunto": "Dos Prepostos (arts. 1.169 a 1.178 do CC)",
+"gabarito": "A",
+"url": "https://www.tecconcursos.com.br/questoes/3022068"
+},
+{
+"id": 504,
+"ano": 2023,
+"materia": "Empresarial",
+"assunto": "Dos Prepostos (arts. 1.169 a 1.178 do CC)",
+"gabarito": "D",
+"url": "https://www.tecconcursos.com.br/questoes/2322963"
+},
+{
+"id": 505,
+"ano": 2025,
+"materia": "Empresarial",
+"assunto": "Sociedade em Comum (arts. 986 a 990 do CC)",
+"gabarito": "B",
+"url": "https://www.tecconcursos.com.br/questoes/3384214"
+},
+{
+"id": 506,
+"ano": 2024,
+"materia": "Empresarial",
+"assunto": "Sociedade em Comum (arts. 986 a 990 do CC)",
+"gabarito": "A",
+"url": "https://www.tecconcursos.com.br/questoes/2851212"
+},
+{
+"id": 507,
+"ano": 2023,
+"materia": "Empresarial",
+"assunto": "Sociedade em Comum (arts. 986 a 990 do CC)",
+"gabarito": "A",
+"url": "https://www.tecconcursos.com.br/questoes/2322956"
+},
+{
+"id": 508,
+"ano": 2025,
+"materia": "Empresarial",
+"assunto": "Sociedade em Conta de Participação (arts. 991 a 996 do CC)",
+"gabarito": "C",
+"url": "https://www.tecconcursos.com.br/questoes/3637007"
+},
+{
+"id": 509,
+"ano": 2024,
+"materia": "Empresarial",
+"assunto": "Sociedade Limitada (arts. 1.052 a 1.087 do CC)",
+"gabarito": "C",
+"url": "https://www.tecconcursos.com.br/questoes/3022066"
+},
+{
+"id": 510,
+"ano": 2023,
+"materia": "Empresarial",
+"assunto": "Sociedade Limitada (arts. 1.052 a 1.087 do CC)",
+"gabarito": "B",
+"url": "https://www.tecconcursos.com.br/questoes/2490691"
+},
+{
+"id": 511,
+"ano": 2022,
+"materia": "Empresarial",
+"assunto": "Sociedade Limitada (arts. 1.052 a 1.087 do CC)",
+"gabarito": "D",
+"url": "https://www.tecconcursos.com.br/questoes/2198138"
+},
+{
+"id": 512,
+"ano": 2021,
+"materia": "Empresarial",
+"assunto": "Sociedade Limitada (arts. 1.052 a 1.087 do CC)",
+"gabarito": "A",
+"url": "https://www.tecconcursos.com.br/questoes/1626354"
+},
+{
+"id": 513,
+"ano": 2021,
+"materia": "Empresarial",
+"assunto": "Sociedade Limitada (arts. 1.052 a 1.087 do CC)",
+"gabarito": "C",
+"url": "https://www.tecconcursos.com.br/questoes/1626359"
+},
+{
+"id": 514,
+"ano": 2021,
+"materia": "Empresarial",
+"assunto": "Sociedade Limitada (arts. 1.052 a 1.087 do CC)",
+"gabarito": "D",
+"url": "https://www.tecconcursos.com.br/questoes/1749069"
+},
+{
+"id": 515,
+"ano": 2020,
+"materia": "Empresarial",
+"assunto": "Sociedade Limitada (arts. 1.052 a 1.087 do CC)",
+"gabarito": "A",
+"url": "https://www.tecconcursos.com.br/questoes/1130832"
+},
+{
+"id": 516,
+"ano": 2020,
+"materia": "Empresarial",
+"assunto": "Sociedade Limitada (arts. 1.052 a 1.087 do CC)",
+"gabarito": "C",
+"url": "https://www.tecconcursos.com.br/questoes/1130833"
+},
+{
+"id": 517,
+"ano": 2022,
+"materia": "Empresarial",
+"assunto": "Sociedade Cooperativa (arts. 1.093 a 1.096 do CC)",
+"gabarito": "C",
+"url": "https://www.tecconcursos.com.br/questoes/1887514"
+},
+{
+"id": 518,
+"ano": 2025,
+"materia": "Empresarial",
+"assunto": "Dissolução, Liquidação e Extinção das Sociedades",
+"gabarito": "D",
+"url": "https://www.tecconcursos.com.br/questoes/3384222"
+},
+{
+"id": 519,
+"ano": 2024,
+"materia": "Empresarial",
+"assunto": "Dissolução, Liquidação e Extinção das Sociedades",
+"gabarito": "A",
+"url": "https://www.tecconcursos.com.br/questoes/3238929"
+},
+{
+"id": 520,
+"ano": 2021,
+"materia": "Empresarial",
+"assunto": "Sociedade Dependente de Autorização - Nacional e Estrangeira",
+"gabarito": "D",
+"url": "https://www.tecconcursos.com.br/questoes/1626357"
+},
+{
+"id": 521,
+"ano": 2022,
+"materia": "Empresarial",
+"assunto": "Ações, Partes Beneficiárias, Debêntures, Bônus de Subscrição",
+"gabarito": "C",
+"url": "https://www.tecconcursos.com.br/questoes/1887512"
+},
+{
+"id": 522,
+"ano": 2023,
+"materia": "Empresarial",
+"assunto": "Outros Atos Cambiários (Saque, Endosso, Aval, Aceite, Prescrição)",
+"gabarito": "D",
+"url": "https://www.tecconcursos.com.br/questoes/2490690"
+},
+{
+"id": 523,
+"ano": 2021,
+"materia": "Empresarial",
+"assunto": "Outros Atos Cambiários (Saque, Endosso, Aval, Aceite, Prescrição)",
+"gabarito": "B",
+"url": "https://www.tecconcursos.com.br/questoes/1626355"
+},
+{
+"id": 524,
+"ano": 2026,
+"materia": "Empresarial",
+"assunto": "Nota Promissória e Commercial Papers",
+"gabarito": "A",
+"url": "https://www.tecconcursos.com.br/questoes/3959137"
+},
+{
+"id": 525,
+"ano": 2022,
+"materia": "Empresarial",
+"assunto": "Nota Promissória e Commercial Papers",
+"gabarito": "B",
+"url": "https://www.tecconcursos.com.br/questoes/2198139"
+},
+{
+"id": 526,
+"ano": 2021,
+"materia": "Empresarial",
+"assunto": "Nota Promissória e Commercial Papers",
+"gabarito": "A",
+"url": "https://www.tecconcursos.com.br/questoes/1749059"
+},
+{
+"id": 527,
+"ano": 2022,
+"materia": "Empresarial",
+"assunto": "Duplicata - Lei nº 5.474/1968",
+"gabarito": "D",
+"url": "https://www.tecconcursos.com.br/questoes/2097732"
+},
+{
+"id": 528,
+"ano": 2021,
+"materia": "Empresarial",
+"assunto": "Duplicata - Lei nº 5.474/1968",
+"gabarito": "C",
+"url": "https://www.tecconcursos.com.br/questoes/1749065"
+},
+{
+"id": 529,
+"ano": 2025,
+"materia": "Empresarial",
+"assunto": "Disposições Comuns à Recuperação Judicial e à Falência",
+"gabarito": "B",
+"url": "https://www.tecconcursos.com.br/questoes/3737967"
+},
+{
+"id": 530,
+"ano": 2024,
+"materia": "Empresarial",
+"assunto": "Disposições Comuns à Recuperação Judicial e à Falência",
+"gabarito": "D",
+"url": "https://www.tecconcursos.com.br/questoes/3238931"
+},
+{
+"id": 531,
+"ano": 2021,
+"materia": "Empresarial",
+"assunto": "Disposições Comuns à Recuperação Judicial e à Falência",
+"gabarito": "B",
+"url": "https://www.tecconcursos.com.br/questoes/1749062"
+},
+{
+"id": 532,
+"ano": 2022,
+"materia": "Empresarial",
+"assunto": "Recuperação Judicial e Convolação em Falência",
+"gabarito": "C",
+"url": "https://www.tecconcursos.com.br/questoes/1887510"
+},
+{
+"id": 533,
+"ano": 2022,
+"materia": "Empresarial",
+"assunto": "Recuperação Judicial e Convolação em Falência",
+"gabarito": "C",
+"url": "https://www.tecconcursos.com.br/questoes/2097731"
+},
+{
+"id": 534,
+"ano": 2026,
+"materia": "Empresarial",
+"assunto": "Da Falência (Arts. 75 a 160 da Lei nº 11.101/2005)",
+"gabarito": "B",
+"url": "https://www.tecconcursos.com.br/questoes/3959139"
+},
+{
+"id": 535,
+"ano": 2025,
+"materia": "Empresarial",
+"assunto": "Da Falência (Arts. 75 a 160 da Lei nº 11.101/2005)",
+"gabarito": "B",
+"url": "https://www.tecconcursos.com.br/questoes/3637009"
+},
+{
+"id": 536,
+"ano": 2024,
+"materia": "Empresarial",
+"assunto": "Da Falência (Arts. 75 a 160 da Lei nº 11.101/2005)",
+"gabarito": "B",
+"url": "https://www.tecconcursos.com.br/questoes/2851204"
+},
+{
+"id": 537,
+"ano": 2024,
+"materia": "Empresarial",
+"assunto": "Da Falência (Arts. 75 a 160 da Lei nº 11.101/2005)",
+"gabarito": "B",
+"url": "https://www.tecconcursos.com.br/questoes/3022069"
+},
+{
+"id": 538,
+"ano": 2023,
+"materia": "Empresarial",
+"assunto": "Da Falência (Arts. 75 a 160 da Lei nº 11.101/2005)",
+"gabarito": "C",
+"url": "https://www.tecconcursos.com.br/questoes/2322959"
+},
+{
+"id": 539,
+"ano": 2022,
+"materia": "Empresarial",
+"assunto": "Da Falência (Arts. 75 a 160 da Lei nº 11.101/2005)",
+"gabarito": "D",
+"url": "https://www.tecconcursos.com.br/questoes/2097733"
+},
+{
+"id": 540,
+"ano": 2022,
+"materia": "Empresarial",
+"assunto": "Da Falência (Arts. 75 a 160 da Lei nº 11.101/2005)",
+"gabarito": "A",
+"url": "https://www.tecconcursos.com.br/questoes/2198137"
+},
+{
+"id": 541,
+"ano": 2020,
+"materia": "Empresarial",
+"assunto": "Da Falência (Arts. 75 a 160 da Lei nº 11.101/2005)",
+"gabarito": "A",
+"url": "https://www.tecconcursos.com.br/questoes/1130838"
+},
+{
+"id": 542,
+"ano": 2023,
+"materia": "Empresarial",
+"assunto": "Da Recuperação Extrajudicial",
+"gabarito": "A",
+"url": "https://www.tecconcursos.com.br/questoes/2715950"
+},
+{
+"id": 543,
+"ano": 2023,
+"materia": "Empresarial",
+"assunto": "Disposições Preliminares (Lei nº 9.279/1996 - LPI)",
+"gabarito": "A",
+"url": "https://www.tecconcursos.com.br/questoes/2322965"
+},
+{
+"id": 544,
+"ano": 2024,
+"materia": "Empresarial",
+"assunto": "Das Patentes (Lei nº 9.279/1996 - LPI)",
+"gabarito": "A",
+"url": "https://www.tecconcursos.com.br/questoes/2851207"
+},
+{
+"id": 545,
+"ano": 2026,
+"materia": "Empresarial",
+"assunto": "Das Marcas (Lei nº 9.279/1996 - LPI)",
+"gabarito": "C",
+"url": "https://www.tecconcursos.com.br/questoes/3959142"
+},
+{
+"id": 546,
+"ano": 2024,
+"materia": "Empresarial",
+"assunto": "Das Marcas (Lei nº 9.279/1996 - LPI)",
+"gabarito": "A",
+"url": "https://www.tecconcursos.com.br/questoes/3238930"
+},
+{
+"id": 547,
+"ano": 2020,
+"materia": "Empresarial",
+"assunto": "Representação, Comissão, Concessão, Distribuição e Agência",
+"gabarito": "A",
+"url": "https://www.tecconcursos.com.br/questoes/1130837"
+},
+{
+"id": 548,
+"ano": 2025,
+"materia": "Empresarial",
+"assunto": "Decreto-Lei nº 911/1969 - Alienação Fiduciária em Garantia",
+"gabarito": "A",
+"url": "https://www.tecconcursos.com.br/questoes/3384234"
+},
+{
+"id": 549,
+"ano": 2025,
+"materia": "Empresarial",
+"assunto": "Decreto-Lei nº 911/1969 - Alienação Fiduciária em Garantia",
+"gabarito": "A",
+"url": "https://www.tecconcursos.com.br/questoes/3737970"
+},
+{
+"id": 550,
+"ano": 2025,
+"materia": "Internacional",
+"assunto": "Convenção de Viena sobre o Direito dos Tratados (1969)",
+"gabarito": "A",
+"url": "https://www.tecconcursos.com.br/questoes/3636816"
+},
+{
+"id": 551,
+"ano": 2023,
+"materia": "Internacional",
+"assunto": "Nacionalidade (DIP)",
+"gabarito": "B",
+"url": "https://www.tecconcursos.com.br/questoes/2490600"
+},
+{
+"id": 552,
+"ano": 2022,
+"materia": "Internacional",
+"assunto": "Nacionalidade (DIP)",
+"gabarito": "B",
+"url": "https://www.tecconcursos.com.br/questoes/1887444"
+},
+{
+"id": 553,
+"ano": 2025,
+"materia": "Internacional",
+"assunto": "Migração e Condição Jurídica do Estrangeiro (Lei nº 13.445/2017)",
+"gabarito": "D",
+"url": "https://www.tecconcursos.com.br/questoes/3737922"
+},
+{
+"id": 554,
+"ano": 2025,
+"materia": "Internacional",
+"assunto": "Migração e Condição Jurídica do Estrangeiro (Lei nº 13.445/2017)",
+"gabarito": "C",
+"url": "https://www.tecconcursos.com.br/questoes/3737924"
+},
+{
+"id": 555,
+"ano": 2024,
+"materia": "Internacional",
+"assunto": "Migração e Condição Jurídica do Estrangeiro (Lei nº 13.445/2017)",
+"gabarito": "B",
+"url": "https://www.tecconcursos.com.br/questoes/3022017"
+},
+{
+"id": 556,
+"ano": 2024,
+"materia": "Internacional",
+"assunto": "Migração e Condição Jurídica do Estrangeiro (Lei nº 13.445/2017)",
+"gabarito": "B",
+"url": "https://www.tecconcursos.com.br/questoes/3238760"
+},
+{
+"id": 557,
+"ano": 2024,
+"materia": "Internacional",
+"assunto": "Migração e Condição Jurídica do Estrangeiro (Lei nº 13.445/2017)",
+"gabarito": "D",
+"url": "https://www.tecconcursos.com.br/questoes/3238778"
+},
+{
+"id": 558,
+"ano": 2023,
+"materia": "Internacional",
+"assunto": "Migração e Condição Jurídica do Estrangeiro (Lei nº 13.445/2017)",
+"gabarito": "A",
+"url": "https://www.tecconcursos.com.br/questoes/2490602"
+},
+{
+"id": 559,
+"ano": 2022,
+"materia": "Internacional",
+"assunto": "Migração e Condição Jurídica do Estrangeiro (Lei nº 13.445/2017)",
+"gabarito": "B",
+"url": "https://www.tecconcursos.com.br/questoes/1887446"
+},
+{
+"id": 560,
+"ano": 2022,
+"materia": "Internacional",
+"assunto": "Migração e Condição Jurídica do Estrangeiro (Lei nº 13.445/2017)",
+"gabarito": "C",
+"url": "https://www.tecconcursos.com.br/questoes/2097674"
+},
+{
+"id": 561,
+"ano": 2022,
+"materia": "Internacional",
+"assunto": "Migração e Condição Jurídica do Estrangeiro (Lei nº 13.445/2017)",
+"gabarito": "B",
+"url": "https://www.tecconcursos.com.br/questoes/2198111"
+},
+{
+"id": 562,
+"ano": 2021,
+"materia": "Internacional",
+"assunto": "Migração e Condição Jurídica do Estrangeiro (Lei nº 13.445/2017)",
+"gabarito": "A",
+"url": "https://www.tecconcursos.com.br/questoes/1626269"
+},
+{
+"id": 563,
+"ano": 2021,
+"materia": "Internacional",
+"assunto": "Migração e Condição Jurídica do Estrangeiro (Lei nº 13.445/2017)",
+"gabarito": "C",
+"url": "https://www.tecconcursos.com.br/questoes/1748835"
+},
+{
+"id": 564,
+"ano": 2020,
+"materia": "Internacional",
+"assunto": "Migração e Condição Jurídica do Estrangeiro (Lei nº 13.445/2017)",
+"gabarito": "C",
+"url": "https://www.tecconcursos.com.br/questoes/1130762"
+},
+{
+"id": 565,
+"ano": 2025,
+"materia": "Internacional",
+"assunto": "Direito Processual Civil Internacional e Cooperação Jurídica",
+"gabarito": "C",
+"url": "https://www.tecconcursos.com.br/questoes/3384015"
+},
+{
+"id": 566,
+"ano": 2025,
+"materia": "Internacional",
+"assunto": "Direito Processual Civil Internacional e Cooperação Jurídica",
+"gabarito": "C",
+"url": "https://www.tecconcursos.com.br/questoes/3384019"
+},
+{
+"id": 567,
+"ano": 2023,
+"materia": "Internacional",
+"assunto": "Direito Processual Civil Internacional e Cooperação Jurídica",
+"gabarito": "C",
+"url": "https://www.tecconcursos.com.br/questoes/2322895"
+},
+{
+"id": 568,
+"ano": 2023,
+"materia": "Internacional",
+"assunto": "Direito Processual Civil Internacional e Cooperação Jurídica",
+"gabarito": "A",
+"url": "https://www.tecconcursos.com.br/questoes/2715746"
+},
+{
+"id": 569,
+"ano": 2026,
+"materia": "Internacional",
+"assunto": "Conflito de Leis no Espaço (Direito Internacional)",
+"gabarito": "D",
+"url": "https://www.tecconcursos.com.br/questoes/3959079"
+},
+{
+"id": 570,
+"ano": 2026,
+"materia": "Internacional",
+"assunto": "Conflito de Leis no Espaço (Direito Internacional)",
+"gabarito": "C",
+"url": "https://www.tecconcursos.com.br/questoes/3959087"
+},
+{
+"id": 571,
+"ano": 2025,
+"materia": "Internacional",
+"assunto": "Conflito de Leis no Espaço (Direito Internacional)",
+"gabarito": "D",
+"url": "https://www.tecconcursos.com.br/questoes/3636806"
+},
+{
+"id": 572,
+"ano": 2024,
+"materia": "Internacional",
+"assunto": "Conflito de Leis no Espaço (Direito Internacional)",
+"gabarito": "D",
+"url": "https://www.tecconcursos.com.br/questoes/2851105"
+},
+{
+"id": 573,
+"ano": 2024,
+"materia": "Internacional",
+"assunto": "Conflito de Leis no Espaço (Direito Internacional)",
+"gabarito": "B",
+"url": "https://www.tecconcursos.com.br/questoes/2851106"
+},
+{
+"id": 574,
+"ano": 2023,
+"materia": "Internacional",
+"assunto": "Conflito de Leis no Espaço (Direito Internacional)",
+"gabarito": "B",
+"url": "https://www.tecconcursos.com.br/questoes/2715745"
+},
+{
+"id": 575,
+"ano": 2022,
+"materia": "Internacional",
+"assunto": "Conflito de Leis no Espaço (Direito Internacional)",
+"gabarito": "B",
+"url": "https://www.tecconcursos.com.br/questoes/2097673"
+},
+{
+"id": 576,
+"ano": 2023,
+"materia": "Notarial",
+"assunto": "Do Nascimento (arts. 50 a 66 da Lei nº 6.015/1973)",
+"gabarito": "C",
+"url": "https://www.tecconcursos.com.br/questoes/2490671"
+},
+{
+"id": 577,
+"ano": 2023,
+"materia": "Notarial",
+"assunto": "Dos Atos Pertinentes ao RPEM (Lei nº 8.934/1994)",
+"gabarito": "A",
+"url": "https://www.tecconcursos.com.br/questoes/2490693"
+},
+{
+"id": 578,
+"ano": 2025,
+"materia": "Penal",
+"assunto": "Princípios Modernos de Direito Penal",
+"gabarito": "C",
+"url": "https://www.tecconcursos.com.br/questoes/3737979"
+},
+{
+"id": 579,
+"ano": 2025,
+"materia": "Penal",
+"assunto": "Princípios Modernos de Direito Penal",
+"gabarito": "C",
+"url": "https://www.tecconcursos.com.br/questoes/3737981"
+},
+{
+"id": 580,
+"ano": 2024,
+"materia": "Penal",
+"assunto": "Princípios Modernos de Direito Penal",
+"gabarito": "C",
+"url": "https://www.tecconcursos.com.br/questoes/3022083"
+},
+{
+"id": 581,
+"ano": 2024,
+"materia": "Penal",
+"assunto": "Conflitos de Leis Penais no Tempo (arts. 1º e 2º do CP)",
+"gabarito": "C",
+"url": "https://www.tecconcursos.com.br/questoes/3238943"
+},
+{
+"id": 582,
+"ano": 2025,
+"materia": "Penal",
+"assunto": "Princípio da Territorialidade (art. 5º do CP)",
+"gabarito": "D",
+"url": "https://www.tecconcursos.com.br/questoes/3637759"
+},
+{
+"id": 583,
+"ano": 2025,
+"materia": "Penal",
+"assunto": "Princípio da Extraterritorialidade (art. 7º do CP)",
+"gabarito": "C",
+"url": "https://www.tecconcursos.com.br/questoes/3384279"
+},
+{
+"id": 584,
+"ano": 2025,
+"materia": "Penal",
+"assunto": "Princípio da Extraterritorialidade (art. 7º do CP)",
+"gabarito": "D",
+"url": "https://www.tecconcursos.com.br/questoes/3737978"
+},
+{
+"id": 585,
+"ano": 2024,
+"materia": "Penal",
+"assunto": "Princípio da Extraterritorialidade (art. 7º do CP)",
+"gabarito": "C",
+"url": "https://www.tecconcursos.com.br/questoes/3238938"
+},
+{
+"id": 586,
+"ano": 2023,
+"materia": "Penal",
+"assunto": "Ação e Omissão (art. 13, § 2º, do CP)",
+"gabarito": "B",
+"url": "https://www.tecconcursos.com.br/questoes/2323010"
+},
+{
+"id": 587,
+"ano": 2026,
+"materia": "Penal",
+"assunto": "Dolo, Culpa e Preterdolo (arts. 18 e 19 do CP)",
+"gabarito": "A",
+"url": "https://www.tecconcursos.com.br/questoes/3959166"
+},
+{
+"id": 588,
+"ano": 2025,
+"materia": "Penal",
+"assunto": "Erro de Tipo (art. 20 do CP)",
+"gabarito": "A",
+"url": "https://www.tecconcursos.com.br/questoes/3384282"
+},
+{
+"id": 589,
+"ano": 2025,
+"materia": "Penal",
+"assunto": "Erro de Tipo (art. 20 do CP)",
+"gabarito": "B",
+"url": "https://www.tecconcursos.com.br/questoes/3637748"
+},
+{
+"id": 590,
+"ano": 2025,
+"materia": "Penal",
+"assunto": "Erro de Tipo (art. 20 do CP)",
+"gabarito": "A",
+"url": "https://www.tecconcursos.com.br/questoes/3737982"
+},
+{
+"id": 591,
+"ano": 2023,
+"materia": "Penal",
+"assunto": "Erro de Tipo (art. 20 do CP)",
+"gabarito": "B",
+"url": "https://www.tecconcursos.com.br/questoes/2490715"
+},
+{
+"id": 592,
+"ano": 2024,
+"materia": "Penal",
+"assunto": "Nexo de Causalidade: Concausas (art. 13, § 1º, do CP)",
+"gabarito": "B",
+"url": "https://www.tecconcursos.com.br/questoes/2851252"
+},
+{
+"id": 593,
+"ano": 2022,
+"materia": "Penal",
+"assunto": "Nexo de Causalidade: Concausas (art. 13, § 1º, do CP)",
+"gabarito": "B",
+"url": "https://www.tecconcursos.com.br/questoes/1887539"
+},
+{
+"id": 594,
+"ano": 2026,
+"materia": "Penal",
+"assunto": "Desistência Voluntária (art. 15 do CP)",
+"gabarito": "D",
+"url": "https://www.tecconcursos.com.br/questoes/3959160"
+},
+{
+"id": 595,
+"ano": 2025,
+"materia": "Penal",
+"assunto": "Desistência Voluntária (art. 15 do CP)",
+"gabarito": "D",
+"url": "https://www.tecconcursos.com.br/questoes/3737980"
+},
+{
+"id": 596,
+"ano": 2024,
+"materia": "Penal",
+"assunto": "Desistência Voluntária (art. 15 do CP)",
+"gabarito": "D",
+"url": "https://www.tecconcursos.com.br/questoes/3022084"
+},
+{
+"id": 597,
+"ano": 2023,
+"materia": "Penal",
+"assunto": "Desistência Voluntária (art. 15 do CP)",
+"gabarito": "B",
+"url": "https://www.tecconcursos.com.br/questoes/2715977"
+},
+{
+"id": 598,
+"ano": 2024,
+"materia": "Penal",
+"assunto": "Tentativa (Crime) (art. 14, II e p.único, do CP)",
+"gabarito": "A",
+"url": "https://www.tecconcursos.com.br/questoes/2851246"
+},
+{
+"id": 599,
+"ano": 2025,
+"materia": "Penal",
+"assunto": "Arrependimento Posterior (art. 16 do CP)",
+"gabarito": "C",
+"url": "https://www.tecconcursos.com.br/questoes/3637752"
+},
+{
+"id": 600,
+"ano": 2022,
+"materia": "Penal",
+"assunto": "Estado de Necessidade (art. 24 do CP)",
+"gabarito": "D",
+"url": "https://www.tecconcursos.com.br/questoes/2198151"
+},
+{
+"id": 601,
+"ano": 2023,
+"materia": "Penal",
+"assunto": "Legítima Defesa (art. 25 do CP)",
+"gabarito": "D",
+"url": "https://www.tecconcursos.com.br/questoes/2715979"
+},
+{
+"id": 602,
+"ano": 2020,
+"materia": "Penal",
+"assunto": "Imputabilidade Penal (arts. 26 a 28 do CP)",
+"gabarito": "C",
+"url": "https://www.tecconcursos.com.br/questoes/1130864"
+},
+{
+"id": 603,
+"ano": 2024,
+"materia": "Penal",
+"assunto": "Erro de Proibição e Descriminantes Putativas (art. 20 §1º e 21)",
+"gabarito": "C",
+"url": "https://www.tecconcursos.com.br/questoes/3238940"
+},
+{
+"id": 604,
+"ano": 2025,
+"materia": "Penal",
+"assunto": "Exigibilidade de Conduta Diversa (art. 22 do CP)",
+"gabarito": "B",
+"url": "https://www.tecconcursos.com.br/questoes/3737983"
+},
+{
+"id": 605,
+"ano": 2024,
+"materia": "Penal",
+"assunto": "Exigibilidade de Conduta Diversa (art. 22 do CP)",
+"gabarito": "D",
+"url": "https://www.tecconcursos.com.br/questoes/3238941"
+},
+{
+"id": 606,
+"ano": 2026,
+"materia": "Penal",
+"assunto": "Concurso de Pessoas (arts. 29 a 31 do CP)",
+"gabarito": "A",
+"url": "https://www.tecconcursos.com.br/questoes/3959162"
+},
+{
+"id": 607,
+"ano": 2025,
+"materia": "Penal",
+"assunto": "Concurso de Pessoas (arts. 29 a 31 do CP)",
+"gabarito": "D",
+"url": "https://www.tecconcursos.com.br/questoes/3384286"
+},
+{
+"id": 608,
+"ano": 2024,
+"materia": "Penal",
+"assunto": "Concurso de Pessoas (arts. 29 a 31 do CP)",
+"gabarito": "A",
+"url": "https://www.tecconcursos.com.br/questoes/3238942"
+},
+{
+"id": 609,
+"ano": 2024,
+"materia": "Penal",
+"assunto": "Penas Privativas de Liberdade: Espécies, Regimes e Progressão",
+"gabarito": "D",
+"url": "https://www.tecconcursos.com.br/questoes/3022086"
+},
+{
+"id": 610,
+"ano": 2025,
+"materia": "Penal",
+"assunto": "Das Penas Restritivas de Direitos (arts. 43 a 48 e 54 a 57)",
+"gabarito": "D",
+"url": "https://www.tecconcursos.com.br/questoes/3384275"
+},
+{
+"id": 611,
+"ano": 2021,
+"materia": "Penal",
+"assunto": "Das Penas Restritivas de Direitos (arts. 43 a 48 e 54 a 57)",
+"gabarito": "A",
+"url": "https://www.tecconcursos.com.br/questoes/1749104"
+},
+{
+"id": 612,
+"ano": 2022,
+"materia": "Penal",
+"assunto": "Da Pena de Multa (arts. 49 a 52 e 58 do CP)",
+"gabarito": "B",
+"url": "https://www.tecconcursos.com.br/questoes/1887537"
+},
+{
+"id": 613,
+"ano": 2022,
+"materia": "Penal",
+"assunto": "Da Pena de Multa (arts. 49 a 52 e 58 do CP)",
+"gabarito": "D",
+"url": "https://www.tecconcursos.com.br/questoes/2198104"
+},
+{
+"id": 614,
+"ano": 2022,
+"materia": "Penal",
+"assunto": "Da Aplicação da Pena (arts. 59 a 68 do CP)",
+"gabarito": "C",
+"url": "https://www.tecconcursos.com.br/questoes/2097795"
+},
+{
+"id": 615,
+"ano": 2021,
+"materia": "Penal",
+"assunto": "Da Aplicação da Pena (arts. 59 a 68 do CP)",
+"gabarito": "C",
+"url": "https://www.tecconcursos.com.br/questoes/1626380"
+},
+{
+"id": 616,
+"ano": 2022,
+"materia": "Penal",
+"assunto": "Concurso de Crimes (arts. 69 a 76 do CP)",
+"gabarito": "C",
+"url": "https://www.tecconcursos.com.br/questoes/2198152"
+},
+{
+"id": 617,
+"ano": 2021,
+"materia": "Penal",
+"assunto": "Concurso de Crimes (arts. 69 a 76 do CP)",
+"gabarito": "D",
+"url": "https://www.tecconcursos.com.br/questoes/1749094"
+},
+{
+"id": 618,
+"ano": 2023,
+"materia": "Penal",
+"assunto": "Suspensão Condicional da Pena e Livramento Condicional",
+"gabarito": "B",
+"url": "https://www.tecconcursos.com.br/questoes/2490713"
+},
+{
+"id": 619,
+"ano": 2024,
+"materia": "Penal",
+"assunto": "Da Prescrição (arts. 108 a 119 do CP)",
+"gabarito": "C",
+"url": "https://www.tecconcursos.com.br/questoes/3022087"
+},
+{
+"id": 620,
+"ano": 2023,
+"materia": "Penal",
+"assunto": "Da Prescrição (arts. 108 a 119 do CP)",
+"gabarito": "A",
+"url": "https://www.tecconcursos.com.br/questoes/2715981"
+},
+{
+"id": 621,
+"ano": 2022,
+"materia": "Penal",
+"assunto": "Da Prescrição (arts. 108 a 119 do CP)",
+"gabarito": "A",
+"url": "https://www.tecconcursos.com.br/questoes/2097793"
+},
+{
+"id": 622,
+"ano": 2025,
+"materia": "Penal",
+"assunto": "Homicídio (art. 121 do CP)",
+"gabarito": "C",
+"url": "https://www.tecconcursos.com.br/questoes/3384288"
+},
+{
+"id": 623,
+"ano": 2025,
+"materia": "Penal",
+"assunto": "Das Lesões Corporais (art. 129 do CP)",
+"gabarito": "C",
+"url": "https://www.tecconcursos.com.br/questoes/3637774"
+},
+{
+"id": 624,
+"ano": 2024,
+"materia": "Penal",
+"assunto": "Das Lesões Corporais (art. 129 do CP)",
+"gabarito": "A",
+"url": "https://www.tecconcursos.com.br/questoes/2851285"
+},
+{
+"id": 625,
+"ano": 2023,
+"materia": "Penal",
+"assunto": "Das Lesões Corporais (art. 129 do CP)",
+"gabarito": "B",
+"url": "https://www.tecconcursos.com.br/questoes/2715975"
+},
+{
+"id": 626,
+"ano": 2021,
+"materia": "Penal",
+"assunto": "Das Lesões Corporais (art. 129 do CP)",
+"gabarito": "D",
+"url": "https://www.tecconcursos.com.br/questoes/1749102"
+},
+{
+"id": 627,
+"ano": 2025,
+"materia": "Penal",
+"assunto": "Dos Crimes contra a Honra (arts. 138 a 145 do CP)",
+"gabarito": "D",
+"url": "https://www.tecconcursos.com.br/questoes/3637744"
+},
+{
+"id": 628,
+"ano": 2020,
+"materia": "Penal",
+"assunto": "Dos Crimes contra a Honra (arts. 138 a 145 do CP)",
+"gabarito": "C",
+"url": "https://www.tecconcursos.com.br/questoes/1130858"
+},
+{
+"id": 629,
+"ano": 2023,
+"materia": "Penal",
+"assunto": "Do Furto (arts. 155 e 156 do CP)",
+"gabarito": "A",
+"url": "https://www.tecconcursos.com.br/questoes/2323004"
+},
+{
+"id": 630,
+"ano": 2022,
+"materia": "Penal",
+"assunto": "Do Furto (arts. 155 e 156 do CP)",
+"gabarito": "A",
+"url": "https://www.tecconcursos.com.br/questoes/1887542"
+},
+{
+"id": 631,
+"ano": 2021,
+"materia": "Penal",
+"assunto": "Do Furto (arts. 155 e 156 do CP)",
+"gabarito": "C",
+"url": "https://www.tecconcursos.com.br/questoes/1626383"
+},
+{
+"id": 632,
+"ano": 2020,
+"materia": "Penal",
+"assunto": "Do Furto (arts. 155 e 156 do CP)",
+"gabarito": "C",
+"url": "https://www.tecconcursos.com.br/questoes/1130861"
+},
+{
+"id": 633,
+"ano": 2024,
+"materia": "Penal",
+"assunto": "Do Roubo e da Extorsão (arts. 157 a 160 do CP)",
+"gabarito": "D",
+"url": "https://www.tecconcursos.com.br/questoes/2851271"
+},
+{
+"id": 634,
+"ano": 2023,
+"materia": "Penal",
+"assunto": "Do Roubo e da Extorsão (arts. 157 a 160 do CP)",
+"gabarito": "D",
+"url": "https://www.tecconcursos.com.br/questoes/2322998"
+},
+{
+"id": 635,
+"ano": 2021,
+"materia": "Penal",
+"assunto": "Do Roubo e da Extorsão (arts. 157 a 160 do CP)",
+"gabarito": "C",
+"url": "https://www.tecconcursos.com.br/questoes/1749101"
+},
+{
+"id": 636,
+"ano": 2025,
+"materia": "Penal",
+"assunto": "Do Dano (arts. 163 a 167 do CP)",
+"gabarito": "C",
+"url": "https://www.tecconcursos.com.br/questoes/3384270"
+},
+{
+"id": 637,
+"ano": 2022,
+"materia": "Penal",
+"assunto": "Do Estelionato e das Outras Fraudes (arts. 171 a 179 do CP)",
+"gabarito": "C",
+"url": "https://www.tecconcursos.com.br/questoes/2198154"
+},
+{
+"id": 638,
+"ano": 2020,
+"materia": "Penal",
+"assunto": "Do Estelionato e das Outras Fraudes (arts. 171 a 179 do CP)",
+"gabarito": "D",
+"url": "https://www.tecconcursos.com.br/questoes/1130856"
+},
+{
+"id": 639,
+"ano": 2023,
+"materia": "Penal",
+"assunto": "Da Receptação (arts. 180 e 180-A do CP)",
+"gabarito": "A",
+"url": "https://www.tecconcursos.com.br/questoes/2490758"
+},
+{
+"id": 640,
+"ano": 2025,
+"materia": "Penal",
+"assunto": "Crimes contra a Liberdade Sexual (arts. 213 a 216-B do CP)",
+"gabarito": "D",
+"url": "https://www.tecconcursos.com.br/questoes/3637740"
+},
+{
+"id": 641,
+"ano": 2024,
+"materia": "Penal",
+"assunto": "Crimes contra a Liberdade Sexual (arts. 213 a 216-B do CP)",
+"gabarito": "A",
+"url": "https://www.tecconcursos.com.br/questoes/3238939"
+},
+{
+"id": 642,
+"ano": 2022,
+"materia": "Penal",
+"assunto": "Crimes contra a Liberdade Sexual (arts. 213 a 216-B do CP)",
+"gabarito": "B",
+"url": "https://www.tecconcursos.com.br/questoes/2198149"
+},
+{
+"id": 643,
+"ano": 2020,
+"materia": "Penal",
+"assunto": "Crimes contra a Liberdade Sexual (arts. 213 a 216-B do CP)",
+"gabarito": "C",
+"url": "https://www.tecconcursos.com.br/questoes/1130862"
+},
+{
+"id": 644,
+"ano": 2023,
+"materia": "Penal",
+"assunto": "Crimes Sexuais contra Vulnerável (arts. 217-A a 226 do CP)",
+"gabarito": "A",
+"url": "https://www.tecconcursos.com.br/questoes/2322991"
+},
+{
+"id": 645,
+"ano": 2022,
+"materia": "Penal",
+"assunto": "Crimes Sexuais contra Vulnerável (arts. 217-A a 226 do CP)",
+"gabarito": "A",
+"url": "https://www.tecconcursos.com.br/questoes/2097794"
+},
+{
+"id": 646,
+"ano": 2022,
+"materia": "Penal",
+"assunto": "Dos Crimes contra a Paz Pública (arts. 286 a 288-A do CP)",
+"gabarito": "A",
+"url": "https://www.tecconcursos.com.br/questoes/1887543"
+},
+{
+"id": 647,
+"ano": 2023,
+"materia": "Penal",
+"assunto": "Peculato (art. 312 do CP)",
+"gabarito": "B",
+"url": "https://www.tecconcursos.com.br/questoes/2490750"
+},
+{
+"id": 648,
+"ano": 2021,
+"materia": "Penal",
+"assunto": "Corrupção Passiva (art. 317 do CP)",
+"gabarito": "D",
+"url": "https://www.tecconcursos.com.br/questoes/1749098"
+},
+{
+"id": 649,
+"ano": 2022,
+"materia": "Penal",
+"assunto": "Prevaricação (arts. 319 e 319-A do CP)",
+"gabarito": "C",
+"url": "https://www.tecconcursos.com.br/questoes/2097789"
+},
+{
+"id": 650,
+"ano": 2024,
+"materia": "Penal",
+"assunto": "Corrupção Ativa (art. 333 do CP)",
+"gabarito": "D",
+"url": "https://www.tecconcursos.com.br/questoes/2851278"
+},
+{
+"id": 651,
+"ano": 2021,
+"materia": "Penal",
+"assunto": "Jurisprudência dos Tribunais Superiores sobre Lei Penal",
+"gabarito": "B",
+"url": "https://www.tecconcursos.com.br/questoes/1626388"
+},
+{
+"id": 652,
+"ano": 2023,
+"materia": "Penal",
+"assunto": "Jurisprudência dos Tribunais Superiores sobre Penas",
+"gabarito": "A",
+"url": "https://www.tecconcursos.com.br/questoes/2715972"
+},
+{
+"id": 653,
+"ano": 2024,
+"materia": "Penal",
+"assunto": "Jurisprudência - Crimes contra o Patrimônio",
+"gabarito": "A",
+"url": "https://www.tecconcursos.com.br/questoes/3022085"
+},
+{
+"id": 654,
+"ano": 2026,
+"materia": "Penal",
+"assunto": "Jurisprudência - Crimes contra a Dignidade Sexual",
+"gabarito": "B",
+"url": "https://www.tecconcursos.com.br/questoes/3959157"
+},
+{
+"id": 655,
+"ano": 2021,
+"materia": "Penal",
+"assunto": "Jurisprudência - Crimes contra a Administração da Justiça",
+"gabarito": "D",
+"url": "https://www.tecconcursos.com.br/questoes/1626381"
+},
+{
+"id": 656,
+"ano": 2025,
+"materia": "Penal",
+"assunto": "Jurisprudências dos Tribunais Superiores - Outros Assuntos",
+"gabarito": "D",
+"url": "https://www.tecconcursos.com.br/questoes/3384292"
+},
+{
+"id": 657,
+"ano": 2025,
+"materia": "Previdenciário",
+"assunto": "Empregado Doméstico (RGPS)",
+"gabarito": "B",
+"url": "https://www.tecconcursos.com.br/questoes/3384319"
+},
+{
+"id": 658,
+"ano": 2025,
+"materia": "Previdenciário",
+"assunto": "Contribuinte Individual (RGPS)",
+"gabarito": "A",
+"url": "https://www.tecconcursos.com.br/questoes/3637814"
+},
+{
+"id": 659,
+"ano": 2023,
+"materia": "Previdenciário",
+"assunto": "Tópicos Mesclados sobre Segurados (RGPS)",
+"gabarito": "B",
+"url": "https://www.tecconcursos.com.br/questoes/2490788"
+},
+{
+"id": 660,
+"ano": 2023,
+"materia": "Previdenciário",
+"assunto": "Carência",
+"gabarito": "A",
+"url": "https://www.tecconcursos.com.br/questoes/2490786"
+},
+{
+"id": 661,
+"ano": 2025,
+"materia": "Previdenciário",
+"assunto": "Da Aposentadoria Por Incapacidade Permanente",
+"gabarito": "A",
+"url": "https://www.tecconcursos.com.br/questoes/3737990"
+},
+{
+"id": 662,
+"ano": 2024,
+"materia": "Previdenciário",
+"assunto": "Da Aposentadoria Por Incapacidade Permanente",
+"gabarito": "C",
+"url": "https://www.tecconcursos.com.br/questoes/2851318"
+},
+{
+"id": 663,
+"ano": 2024,
+"materia": "Previdenciário",
+"assunto": "Da Aposentadoria Por Incapacidade Permanente",
+"gabarito": "B",
+"url": "https://www.tecconcursos.com.br/questoes/3238951"
+},
+{
+"id": 664,
+"ano": 2026,
+"materia": "Previdenciário",
+"assunto": "Da Aposentadoria Programada (Normal e do Professor)",
+"gabarito": "B",
+"url": "https://www.tecconcursos.com.br/questoes/3959211"
+},
+{
+"id": 665,
+"ano": 2026,
+"materia": "Previdenciário",
+"assunto": "Do Auxílio-Doença",
+"gabarito": "A",
+"url": "https://www.tecconcursos.com.br/questoes/3959212"
+},
+{
+"id": 666,
+"ano": 2025,
+"materia": "Previdenciário",
+"assunto": "Do Auxílio-Doença",
+"gabarito": "D",
+"url": "https://www.tecconcursos.com.br/questoes/3737991"
+},
+{
+"id": 667,
+"ano": 2023,
+"materia": "Previdenciário",
+"assunto": "Do Salário-Família",
+"gabarito": "C",
+"url": "https://www.tecconcursos.com.br/questoes/2715991"
+},
+{
+"id": 668,
+"ano": 2024,
+"materia": "Previdenciário",
+"assunto": "Do Auxílio-Acidente",
+"gabarito": "A",
+"url": "https://www.tecconcursos.com.br/questoes/3022097"
+},
+{
+"id": 669,
+"ano": 2024,
+"materia": "Previdenciário",
+"assunto": "Da Pensão por Morte",
+"gabarito": "A",
+"url": "https://www.tecconcursos.com.br/questoes/3238950"
+},
+{
+"id": 670,
+"ano": 2023,
+"materia": "Previdenciário",
+"assunto": "Da Pensão por Morte",
+"gabarito": "B",
+"url": "https://www.tecconcursos.com.br/questoes/2715992"
+},
+{
+"id": 671,
+"ano": 2025,
+"materia": "Previdenciário",
+"assunto": "Do Auxílio-Reclusão",
+"gabarito": "D",
+"url": "https://www.tecconcursos.com.br/questoes/3384320"
+},
+{
+"id": 672,
+"ano": 2024,
+"materia": "Previdenciário",
+"assunto": "Do Auxílio-Reclusão",
+"gabarito": "A",
+"url": "https://www.tecconcursos.com.br/questoes/2851324"
+},
+{
+"id": 673,
+"ano": 2025,
+"materia": "Previdenciário",
+"assunto": "Habilitação e Reabilitação de Profissionais e Serviço Social",
+"gabarito": "A",
+"url": "https://www.tecconcursos.com.br/questoes/3637807"
+},
+{
+"id": 674,
+"ano": 2024,
+"materia": "Previdenciário",
+"assunto": "Regime Próprio de Previdência Social na CF",
+"gabarito": "D",
+"url": "https://www.tecconcursos.com.br/questoes/3022096"
+},
+{
+"id": 675,
+"ano": 2021,
+"materia": "Processual Civil",
+"assunto": "Limites da Jurisdição Nacional e Cooperação Internacional",
+"gabarito": "C",
+"url": "https://www.tecconcursos.com.br/questoes/1748836"
+},
+{
+"id": 676,
+"ano": 2022,
+"materia": "Processual Civil",
+"assunto": "Da Capacidade Processual (arts. 70 a 76)",
+"gabarito": "D",
+"url": "https://www.tecconcursos.com.br/questoes/2097745"
+},
+{
+"id": 677,
+"ano": 2024,
+"materia": "Processual Civil",
+"assunto": "Dos Deveres das Partes e de seus Procuradores (arts. 77 a 102)",
+"gabarito": "B",
+"url": "https://www.tecconcursos.com.br/questoes/3238935"
+},
+{
+"id": 678,
+"ano": 2023,
+"materia": "Processual Civil",
+"assunto": "Dos Deveres das Partes e de seus Procuradores (arts. 77 a 102)",
+"gabarito": "B",
+"url": "https://www.tecconcursos.com.br/questoes/2322985"
+},
+{
+"id": 679,
+"ano": 2023,
+"materia": "Processual Civil",
+"assunto": "Dos Deveres das Partes e de seus Procuradores (arts. 77 a 102)",
+"gabarito": "A",
+"url": "https://www.tecconcursos.com.br/questoes/2490702"
+},
+{
+"id": 680,
+"ano": 2025,
+"materia": "Processual Civil",
+"assunto": "Dos Procuradores (arts. 103 a 107)",
+"gabarito": "D",
+"url": "https://www.tecconcursos.com.br/questoes/3637035"
+},
+{
+"id": 681,
+"ano": 2024,
+"materia": "Processual Civil",
+"assunto": "Dos Procuradores (arts. 103 a 107)",
+"gabarito": "A",
+"url": "https://www.tecconcursos.com.br/questoes/2851237"
+},
+{
+"id": 682,
+"ano": 2025,
+"materia": "Processual Civil",
+"assunto": "Do Litisconsórcio (arts. 113 a 118)",
+"gabarito": "C",
+"url": "https://www.tecconcursos.com.br/questoes/3384237"
+},
+{
+"id": 683,
+"ano": 2022,
+"materia": "Processual Civil",
+"assunto": "Do Litisconsórcio (arts. 113 a 118)",
+"gabarito": "B",
+"url": "https://www.tecconcursos.com.br/questoes/2097741"
+},
+{
+"id": 684,
+"ano": 2024,
+"materia": "Processual Civil",
+"assunto": "Da Intervenção de Terceiros (arts. 119 a 138)",
+"gabarito": "D",
+"url": "https://www.tecconcursos.com.br/questoes/3022071"
+},
+{
+"id": 685,
+"ano": 2024,
+"materia": "Processual Civil",
+"assunto": "Da Intervenção de Terceiros (arts. 119 a 138)",
+"gabarito": "B",
+"url": "https://www.tecconcursos.com.br/questoes/3238937"
+},
+{
+"id": 686,
+"ano": 2023,
+"materia": "Processual Civil",
+"assunto": "Da Intervenção de Terceiros (arts. 119 a 138)",
+"gabarito": "B",
+"url": "https://www.tecconcursos.com.br/questoes/2715960"
+},
+{
+"id": 687,
+"ano": 2024,
+"materia": "Processual Civil",
+"assunto": "Dos Impedimentos e da Suspeição (arts. 144 a 148)",
+"gabarito": "D",
+"url": "https://www.tecconcursos.com.br/questoes/3022070"
+},
+{
+"id": 688,
+"ano": 2025,
+"materia": "Processual Civil",
+"assunto": "Da Forma dos Atos Processuais (arts. 188 a 211)",
+"gabarito": "A",
+"url": "https://www.tecconcursos.com.br/questoes/3637054"
+},
+{
+"id": 689,
+"ano": 2022,
+"materia": "Processual Civil",
+"assunto": "Da Forma dos Atos Processuais (arts. 188 a 211)",
+"gabarito": "D",
+"url": "https://www.tecconcursos.com.br/questoes/2198143"
+},
+{
+"id": 690,
+"ano": 2024,
+"materia": "Processual Civil",
+"assunto": "Dos Prazos (arts. 218 a 235)",
+"gabarito": "D",
+"url": "https://www.tecconcursos.com.br/questoes/2851239"
+},
+{
+"id": 691,
+"ano": 2022,
+"materia": "Processual Civil",
+"assunto": "Da Citação (arts. 238 a 259)",
+"gabarito": "C",
+"url": "https://www.tecconcursos.com.br/questoes/2198146"
+},
+{
+"id": 692,
+"ano": 2021,
+"materia": "Processual Civil",
+"assunto": "Das Nulidades (arts. 276 a 283)",
+"gabarito": "B",
+"url": "https://www.tecconcursos.com.br/questoes/1626361"
+},
+{
+"id": 693,
+"ano": 2024,
+"materia": "Processual Civil",
+"assunto": "Da Tutela Provisória (arts. 294 a 311)",
+"gabarito": "C",
+"url": "https://www.tecconcursos.com.br/questoes/2851244"
+},
+{
+"id": 694,
+"ano": 2024,
+"materia": "Processual Civil",
+"assunto": "Da Tutela Provisória (arts. 294 a 311)",
+"gabarito": "B",
+"url": "https://www.tecconcursos.com.br/questoes/3022072"
+},
+{
+"id": 695,
+"ano": 2023,
+"materia": "Processual Civil",
+"assunto": "Da Tutela Provisória (arts. 294 a 311)",
+"gabarito": "D",
+"url": "https://www.tecconcursos.com.br/questoes/2715962"
+},
+{
+"id": 696,
+"ano": 2022,
+"materia": "Processual Civil",
+"assunto": "Da Tutela Provisória (arts. 294 a 311)",
+"gabarito": "A",
+"url": "https://www.tecconcursos.com.br/questoes/2097740"
+},
+{
+"id": 697,
+"ano": 2022,
+"materia": "Processual Civil",
+"assunto": "Da Tutela Provisória (arts. 294 a 311)",
+"gabarito": "C",
+"url": "https://www.tecconcursos.com.br/questoes/2097786"
+},
+{
+"id": 698,
+"ano": 2021,
+"materia": "Processual Civil",
+"assunto": "Da Tutela Provisória (arts. 294 a 311)",
+"gabarito": "D",
+"url": "https://www.tecconcursos.com.br/questoes/1749091"
+},
+{
+"id": 699,
+"ano": 2023,
+"materia": "Processual Civil",
+"assunto": "Da Petição Inicial (arts. 319 a 331)",
+"gabarito": "B",
+"url": "https://www.tecconcursos.com.br/questoes/2322977"
+},
+{
+"id": 700,
+"ano": 2021,
+"materia": "Processual Civil",
+"assunto": "Da Petição Inicial (arts. 319 a 331)",
+"gabarito": "C",
+"url": "https://www.tecconcursos.com.br/questoes/1749072"
+}
+]

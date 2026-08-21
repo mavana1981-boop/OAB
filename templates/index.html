@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Diário de Estudos — Estatística OAB</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#EFEAE0;
+    --paper-dim:#E4DDCC;
+    --ink:#22262B;
+    --ink-soft:#5B5A52;
+    --navy:#1B3A4B;
+    --navy-deep:#122732;
+    --brass:#A9822F;
+    --brass-soft:#C9A65C;
+    --burgundy:#7A2E38;
+    --sage:#4B6355;
+    --line: rgba(34,38,43,0.15);
+    --card:#F7F4EB;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:
+      radial-gradient(1200px 600px at 10% -10%, rgba(169,130,47,0.08), transparent 60%),
+      var(--paper);
+    color:var(--ink);
+    font-family:'Inter',sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1180px;margin:0 auto;padding:28px 24px 80px;}
+
+  /* Masthead */
+  .masthead{
+    border-top:3px solid var(--navy);
+    border-bottom:1px solid var(--ink);
+    padding:18px 0 14px;
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    gap:20px;
+  }
+  .masthead .left{flex:1;}
+  .eyebrow{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:11px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    margin-bottom:6px;
+  }
+  h1{
+    font-family:'Source Serif 4',serif;
+    font-weight:700;
+    font-size:clamp(28px,4vw,42px);
+    line-height:1.05;
+    margin:0 0 6px;
+    color:var(--navy-deep);
+    letter-spacing:-0.01em;
+  }
+  .subhead{
+    font-size:14px;
+    color:var(--ink-soft);
+    font-family:'IBM Plex Mono',monospace;
+  }
+  .seal{
+    width:96px;height:96px;border-radius:50%;
+    flex:0 0 auto;
+    display:flex;align-items:center;justify-content:center;
+    background: conic-gradient(from 220deg, var(--navy) 0 0%, var(--paper-dim) 0);
+    position:relative;
+    border:2px solid var(--navy);
+  }
+  .seal::before{
+    content:"";
+    position:absolute; inset:6px;
+    border-radius:50%;
+    border:1px dashed var(--brass);
+  }
+  .seal .n{
+    font-family:'Source Serif 4',serif;
+    font-weight:700;
+    font-size:26px;
+    color:var(--navy-deep);
+  }
+  .seal .l{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:8px;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+  }
+  .seal-inner{display:flex;flex-direction:column;align-items:center;line-height:1;gap:2px;}
+
+  /* KPI row */
+  .kpis{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:14px;
+    margin:26px 0 8px;
+  }
+  .kpi{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-left:3px solid var(--navy);
+    padding:14px 16px;
+  }
+  .kpi .label{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:10.5px;
+    letter-spacing:.09em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    margin-bottom:6px;
+  }
+  .kpi .value{
+    font-family:'Source Serif 4',serif;
+    font-size:30px;
+    font-weight:700;
+    color:var(--navy-deep);
+  }
+  .kpi .sub{font-size:11.5px;color:var(--ink-soft);margin-top:2px;}
+
+  /* Filter bar */
+  .filters{
+    margin-top:26px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    align-items:center;
+    padding:14px 16px;
+    background:var(--card);
+    border:1px solid var(--line);
+  }
+  .filters .ftitle{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:.1em;
+    color:var(--ink-soft);
+    margin-right:4px;
+  }
+  select, input[type=text]{
+    font-family:'Inter',sans-serif;
+    font-size:13px;
+    padding:7px 10px;
+    border:1px solid var(--ink);
+    background:var(--paper);
+    color:var(--ink);
+    outline:none;
+    border-radius:2px;
+  }
+  select:focus, input[type=text]:focus{
+    outline:2px solid var(--brass);
+    outline-offset:1px;
+  }
+  input[type=text]{min-width:220px;flex:1;}
+  .btn-reset{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:11.5px;
+    letter-spacing:.05em;
+    text-transform:uppercase;
+    background:transparent;
+    border:1px solid var(--burgundy);
+    color:var(--burgundy);
+    padding:7px 12px;
+    cursor:pointer;
+  }
+  .btn-reset:hover{background:var(--burgundy);color:#fff;}
+
+  /* Section headers */
+  .section-title{
+    font-family:'Source Serif 4',serif;
+    font-weight:600;
+    font-size:19px;
+    color:var(--navy-deep);
+    margin:34px 0 12px;
+    padding-bottom:8px;
+    border-bottom:1px solid var(--ink);
+    display:flex;
+    align-items:baseline;
+    justify-content:space-between;
+  }
+  .section-title .tag{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:11px;
+    color:var(--ink-soft);
+    text-transform:none;
+  }
+
+  .charts-grid{
+    display:grid;
+    grid-template-columns:1.15fr 1fr;
+    gap:18px;
+  }
+  .chart-card{
+    background:var(--card);
+    border:1px solid var(--line);
+    padding:16px;
+  }
+  .chart-card h3{
+    margin:0 0 12px;
+    font-family:'IBM Plex Mono',monospace;
+    font-size:11.5px;
+    text-transform:uppercase;
+    letter-spacing:.08em;
+    color:var(--ink-soft);
+    font-weight:500;
+  }
+  .chart-wrap{position:relative;height:280px;}
+
+  /* Assunto ranking */
+  .rank-list{list-style:none;margin:0;padding:0;}
+  .rank-list li{
+    display:grid;
+    grid-template-columns:26px 1fr 40px;
+    align-items:center;
+    gap:10px;
+    padding:7px 0;
+    border-bottom:1px dotted var(--line);
+    font-size:13px;
+  }
+  .rank-list li:last-child{border-bottom:none;}
+  .rank-list .idx{
+    font-family:'IBM Plex Mono',monospace;
+    color:var(--ink-soft);
+    font-size:11px;
+  }
+  .rank-list .name{color:var(--ink);}
+  .rank-list .bar-track{
+    grid-column:2/3;
+    height:6px;
+    background:var(--paper-dim);
+    margin-top:4px;
+    position:relative;
+    overflow:hidden;
+  }
+  .rank-list .bar-fill{
+    height:100%;
+    background:var(--brass);
+  }
+  .rank-list .count{
+    text-align:right;
+    font-family:'IBM Plex Mono',monospace;
+    font-weight:600;
+    color:var(--navy-deep);
+  }
+  .rank-item{display:flex;flex-direction:column;gap:2px;}
+
+  /* Table */
+  table{
+    width:100%;
+    border-collapse:collapse;
+    font-size:13px;
+    background:var(--card);
+  }
+  thead th{
+    text-align:left;
+    font-family:'IBM Plex Mono',monospace;
+    font-size:10.5px;
+    text-transform:uppercase;
+    letter-spacing:.06em;
+    color:var(--ink-soft);
+    padding:10px 10px;
+    border-bottom:2px solid var(--ink);
+    cursor:pointer;
+    white-space:nowrap;
+  }
+  thead th:hover{color:var(--navy-deep);}
+  tbody td{
+    padding:9px 10px;
+    border-bottom:1px solid var(--line);
+    vertical-align:top;
+  }
+  tbody tr:hover{background:var(--paper-dim);}
+  .badge{
+    display:inline-block;
+    font-family:'IBM Plex Mono',monospace;
+    font-size:10.5px;
+    padding:2px 6px;
+    border:1px solid currentColor;
+    border-radius:2px;
+    white-space:nowrap;
+  }
+  .badge.AFO{color:#4B6355;}
+  .badge.Administrativo{color:#1B3A4B;}
+  .badge.Ambiental{color:#3E7A4A;}
+  .badge.Civil{color:#7A2E38;}
+  .badge.Empresarial{color:#8A5A17;}
+  .badge.Internacional{color:#3A5B8C;}
+  .badge.Notarial{color:#6B4A8C;}
+  .badge.Penal{color:#9B2C2C;}
+  .badge.Previdenciário{color:#2C7A7B;}
+  .badge.Processual-Civil{color:#5B4636;}
+  a.qlink{color:var(--navy-deep);text-decoration:none;border-bottom:1px solid var(--brass);}
+  a.qlink:hover{color:var(--burgundy);}
+  .table-scroll{max-height:560px;overflow-y:auto;border:1px solid var(--line);border-top:none;}
+  .table-wrap{border:1px solid var(--line);border-bottom:none;}
+
+  .count-note{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:11.5px;
+    color:var(--ink-soft);
+    margin:8px 0 0;
+  }
+
+  footer{
+    margin-top:40px;
+    padding-top:14px;
+    border-top:1px solid var(--ink);
+    font-family:'IBM Plex Mono',monospace;
+    font-size:11px;
+    color:var(--ink-soft);
+    display:flex;
+    justify-content:space-between;
+  }
+
+  @media (max-width:860px){
+    .kpis{grid-template-columns:repeat(2,1fr);}
+    .charts-grid{grid-template-columns:1fr;}
+    .masthead{flex-direction:column;align-items:flex-start;}
+    .seal{align-self:flex-end;margin-top:-60px;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="masthead">
+    <div class="left">
+      <div class="eyebrow">Caderno de Questões · Ordenação por Matéria e Assunto</div>
+      <h1>Diário de Estudos — OAB</h1>
+      <div class="subhead">Exame Unificado · Edições 2020–2026 · Estatística para revisão dirigida</div>
+    </div>
+    <div class="seal">
+      <div class="seal-inner">
+        <span class="n" id="sealCount">400</span>
+        <span class="l">questões</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="kpis" id="kpiRow"></div>
+
+  <div class="filters">
+    <span class="ftitle">Filtrar</span>
+    <select id="fMateria"><option value="">Todas as matérias</option></select>
+    <select id="fAno"><option value="">Todos os anos</option></select>
+    <select id="fGabarito"><option value="">Todos os gabaritos</option></select>
+    <input type="text" id="fBusca" placeholder="Buscar assunto…">
+    <button class="btn-reset" id="btnReset">Limpar filtros</button>
+  </div>
+
+  <div class="section-title">Distribuição por matéria e por ano <span class="tag" id="tagCharts"></span></div>
+  <div class="charts-grid">
+    <div class="chart-card">
+      <h3>Questões por matéria</h3>
+      <div class="chart-wrap"><canvas id="chartMateria"></canvas></div>
+    </div>
+    <div class="chart-card">
+      <h3>Questões por ano de edição</h3>
+      <div class="chart-wrap"><canvas id="chartAno"></canvas></div>
+    </div>
+  </div>
+
+  <div class="section-title">Assuntos mais cobrados <span class="tag" id="tagRank"></span></div>
+  <div class="chart-card">
+    <ol class="rank-list" id="rankList"></ol>
+  </div>
+
+  <div class="section-title">Todas as questões <span class="tag" id="tagTable"></span></div>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th data-key="id">#</th>
+          <th data-key="ano">Ano</th>
+          <th data-key="materia">Matéria</th>
+          <th data-key="assunto">Assunto</th>
+          <th data-key="gabarito">Gab.</th>
+          <th>Link</th>
+        </tr>
+      </thead>
+    </table>
+  </div>
+  <div class="table-scroll">
+    <table>
+      <tbody id="tblBody"></tbody>
+    </table>
+  </div>
+  <p class="count-note" id="tableCount"></p>
+
+  <footer>
+    <span>Fonte: TecConcursos · Caderno FGV/OAB 2020–2026</span>
+    <span id="footRight"></span>
+  </footer>
+</div>
+
+<script>
+const DATA = {{ data_json|safe }};
+
+const COLORS = {
+  AFO: '#4B6355',
+  Administrativo: '#1B3A4B',
+  Ambiental: '#3E7A4A',
+  Civil: '#7A2E38',
+  Empresarial: '#8A5A17',
+  Internacional: '#3A5B8C',
+  Notarial: '#6B4A8C',
+  Penal: '#9B2C2C',
+  'Previdenciário': '#2C7A7B',
+  'Processual Civil': '#5B4636'
+};
+
+function clsName(m){ return String(m).replace(/\s+/g,'-'); }
+
+let state = { materia:'', ano:'', gabarito:'', busca:'', sortKey:'id', sortDir:1 };
+
+function filtered(){
+  return DATA.filter(d=>{
+    if(state.materia && d.materia!==state.materia) return false;
+    if(state.ano && String(d.ano)!==state.ano) return false;
+    if(state.gabarito && d.gabarito!==state.gabarito) return false;
+    if(state.busca && !d.assunto.toLowerCase().includes(state.busca.toLowerCase())) return false;
+    return true;
+  });
+}
+
+function uniq(arr){ return [...new Set(arr)]; }
+
+function populateSelects(){
+  const materias = uniq(DATA.map(d=>d.materia)).sort();
+  const anos = uniq(DATA.map(d=>d.ano)).sort((a,b)=>a-b);
+  const gabs = uniq(DATA.map(d=>d.gabarito)).sort();
+  const selM = document.getElementById('fMateria');
+  materias.forEach(m=>{
+    const o=document.createElement('option'); o.value=m; o.textContent=m; selM.appendChild(o);
+  });
+  const selA = document.getElementById('fAno');
+  anos.forEach(a=>{
+    const o=document.createElement('option'); o.value=a; o.textContent=a; selA.appendChild(o);
+  });
+  const selG = document.getElementById('fGabarito');
+  gabs.forEach(g=>{
+    const o=document.createElement('option'); o.value=g; o.textContent=g; selG.appendChild(o);
+  });
+}
+
+let chartMateria, chartAno;
+
+function renderKPIs(list){
+  const materiasCount = uniq(list.map(d=>d.materia)).length;
+  const anosCount = uniq(list.map(d=>d.ano)).length;
+  const assuntoCounts = {};
+  list.forEach(d=>{ assuntoCounts[d.assunto]=(assuntoCounts[d.assunto]||0)+1; });
+  let topAssunto = '—', topN = 0;
+  Object.entries(assuntoCounts).forEach(([k,v])=>{ if(v>topN){topN=v; topAssunto=k;} });
+
+  const kpiRow = document.getElementById('kpiRow');
+  kpiRow.innerHTML = `
+    <div class="kpi"><div class="label">Questões no filtro</div><div class="value">${list.length}</div><div class="sub">de ${DATA.length} no caderno</div></div>
+    <div class="kpi"><div class="label">Matérias</div><div class="value">${materiasCount}</div><div class="sub">categorias distintas</div></div>
+    <div class="kpi"><div class="label">Edições (anos)</div><div class="value">${anosCount}</div><div class="sub">2020 – 2026</div></div>
+    <div class="kpi"><div class="label">Assunto mais frequente</div><div class="value" style="font-size:16px;line-height:1.2">${topAssunto}</div><div class="sub">${topN} questão(ões)</div></div>
+  `;
+  document.getElementById('sealCount').textContent = list.length;
+}
+
+function renderCharts(list){
+  const byMateria = {};
+  list.forEach(d=>{ byMateria[d.materia]=(byMateria[d.materia]||0)+1; });
+  const materiaLabels = Object.keys(byMateria).sort((a,b)=>byMateria[b]-byMateria[a]);
+  const materiaVals = materiaLabels.map(m=>byMateria[m]);
+  const materiaColors = materiaLabels.map(m=>COLORS[m]||'#999');
+
+  const byAno = {};
+  list.forEach(d=>{ byAno[d.ano]=(byAno[d.ano]||0)+1; });
+  const anoLabels = Object.keys(byAno).sort((a,b)=>a-b);
+  const anoVals = anoLabels.map(a=>byAno[a]);
+
+  const fontStack = "'IBM Plex Mono', monospace";
+
+  if(chartMateria) chartMateria.destroy();
+  chartMateria = new Chart(document.getElementById('chartMateria'), {
+    type:'bar',
+    data:{ labels:materiaLabels, datasets:[{ data:materiaVals, backgroundColor:materiaColors, borderRadius:2, maxBarThickness:40 }]},
+    options:{
+      indexAxis:'y',
+      responsive:true, maintainAspectRatio:false,
+      plugins:{legend:{display:false}, tooltip:{titleFont:{family:fontStack},bodyFont:{family:fontStack}}},
+      scales:{
+        x:{beginAtZero:true, grid:{color:'rgba(34,38,43,0.08)'}, ticks:{font:{family:fontStack,size:11}, precision:0}},
+        y:{grid:{display:false}, ticks:{font:{family:fontStack,size:11}}}
+      }
+    }
+  });
+
+  if(chartAno) chartAno.destroy();
+  chartAno = new Chart(document.getElementById('chartAno'), {
+    type:'bar',
+    data:{ labels:anoLabels, datasets:[{ data:anoVals, backgroundColor:'#A9822F', borderRadius:2, maxBarThickness:36 }]},
+    options:{
+      responsive:true, maintainAspectRatio:false,
+      plugins:{legend:{display:false}, tooltip:{titleFont:{family:fontStack},bodyFont:{family:fontStack}}},
+      scales:{
+        x:{grid:{display:false}, ticks:{font:{family:fontStack,size:11}}},
+        y:{beginAtZero:true, grid:{color:'rgba(34,38,43,0.08)'}, ticks:{font:{family:fontStack,size:11}, precision:0}}
+      }
+    }
+  });
+}
+
+function renderRanking(list){
+  const counts = {};
+  list.forEach(d=>{
+    const key = d.assunto + '|||' + d.materia;
+    counts[key] = (counts[key]||0)+1;
+  });
+  const entries = Object.entries(counts).sort((a,b)=>b[1]-a[1]).slice(0,15);
+  const max = entries.length ? entries[0][1] : 1;
+  const rankList = document.getElementById('rankList');
+  rankList.innerHTML = entries.map(([key,count],i)=>{
+    const [assunto, materia] = key.split('|||');
+    const pct = (count/max*100).toFixed(0);
+    return `<li>
+      <span class="idx">${String(i+1).padStart(2,'0')}</span>
+      <div class="rank-item">
+        <span class="name">${assunto} <span class="badge ${clsName(materia)}" style="margin-left:6px">${materia}</span></span>
+        <div class="bar-track"><div class="bar-fill" style="width:${pct}%"></div></div>
+      </div>
+      <span class="count">${count}</span>
+    </li>`;
+  }).join('');
+  document.getElementById('tagRank').textContent = `top ${entries.length} de ${uniq(list.map(d=>d.assunto)).length} assuntos no filtro`;
+}
+
+function renderTable(list){
+  const sorted = [...list].sort((a,b)=>{
+    let va=a[state.sortKey], vb=b[state.sortKey];
+    if(typeof va === 'string'){ va=va.toLowerCase(); vb=vb.toLowerCase(); }
+    if(va<vb) return -1*state.sortDir;
+    if(va>vb) return 1*state.sortDir;
+    return 0;
+  });
+  const tbody = document.getElementById('tblBody');
+  tbody.innerHTML = sorted.map(d=>`
+    <tr>
+      <td>${d.id}</td>
+      <td>${d.ano}</td>
+      <td><span class="badge ${clsName(d.materia)}">${d.materia}</span></td>
+      <td>${d.assunto}</td>
+      <td>${d.gabarito}</td>
+      <td><a class="qlink" href="${d.url}" target="_blank" rel="noopener">abrir ↗</a></td>
+    </tr>
+  `).join('');
+  document.getElementById('tableCount').textContent = `Exibindo ${sorted.length} questão(ões) — ordenado por ${state.sortKey} (${state.sortDir===1?'crescente':'decrescente'})`;
+}
+
+function renderAll(){
+  const list = filtered();
+  renderKPIs(list);
+  renderCharts(list);
+  renderRanking(list);
+  renderTable(list);
+  document.getElementById('tagCharts').textContent = state.materia || state.ano || state.gabarito || state.busca ? '(filtro ativo)' : '(caderno completo)';
+  document.getElementById('tagTable').textContent = state.materia || state.ano || state.gabarito || state.busca ? '(filtro ativo)' : '';
+}
+
+document.getElementById('fMateria').addEventListener('change', e=>{ state.materia=e.target.value; renderAll(); });
+document.getElementById('fAno').addEventListener('change', e=>{ state.ano=e.target.value; renderAll(); });
+document.getElementById('fGabarito').addEventListener('change', e=>{ state.gabarito=e.target.value; renderAll(); });
+document.getElementById('fBusca').addEventListener('input', e=>{ state.busca=e.target.value; renderAll(); });
+document.getElementById('btnReset').addEventListener('click', ()=>{
+  state = { materia:'', ano:'', gabarito:'', busca:'', sortKey:'id', sortDir:1 };
+  document.getElementById('fMateria').value='';
+  document.getElementById('fAno').value='';
+  document.getElementById('fGabarito').value='';
+  document.getElementById('fBusca').value='';
+  renderAll();
+});
+document.querySelectorAll('thead th[data-key]').forEach(th=>{
+  th.addEventListener('click', ()=>{
+    const key = th.dataset.key;
+    if(state.sortKey===key){ state.sortDir*=-1; } else { state.sortKey=key; state.sortDir=1; }
+    renderTable(filtered());
+  });
+});
+
+populateSelects();
+renderAll();
+document.getElementById('footRight').textContent = 'Gerado ' + new Date().toLocaleDateString('pt-BR');
+</script>
+</body>
+</html>
