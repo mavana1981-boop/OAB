@@ -24,6 +24,7 @@
     padding:14px 16px;}
   .kpi.dup{border-left-color:var(--burgundy);}
   .kpi.add{border-left-color:var(--sage);}
+  .kpi.renum{border-left-color:var(--brass);}
   .kpi .label{font-family:'IBM Plex Mono',monospace;font-size:10px;text-transform:uppercase;
     letter-spacing:.08em;color:var(--ink-soft);margin-bottom:4px;}
   .kpi .value{font-family:'Source Serif 4',serif;font-size:26px;font-weight:700;color:var(--navy-deep);}
@@ -53,13 +54,14 @@
     <div class="kpis">
       <div class="kpi"><div class="label">Lidas no PDF</div><div class="value">{{ parsed }}</div></div>
       <div class="kpi add"><div class="label">Adicionadas</div><div class="value">{{ added|length }}</div></div>
+      <div class="kpi renum"><div class="label">Renumeradas</div><div class="value">{{ renumbered|length }}</div></div>
       <div class="kpi dup"><div class="label">Duplicadas (ignoradas)</div><div class="value">{{ duplicates|length }}</div></div>
     </div>
 
     <p style="font-size:13px;color:var(--ink-soft);">Base atual após importação: <strong>{{ total_atual }}</strong> questões.</p>
 
     <div class="section">
-      <h2>Questões adicionadas</h2>
+      <h2>Questões adicionadas (número do PDF preservado)</h2>
       {% if added %}
       <table>
         <thead><tr><th>#</th><th>Ano</th><th>Matéria</th><th>Assunto</th><th>Gab.</th></tr></thead>
@@ -75,13 +77,36 @@
     </div>
 
     <div class="section">
+      <h2>Adicionadas com numeração ajustada</h2>
+      <p style="font-size:12.5px;color:var(--ink-soft);margin:-2px 0 10px;">
+        O número dessas questões no PDF de origem já estava ocupado por
+        outra questão na base (cada PDF exportado renumera a partir de 1).
+        Elas foram gravadas com um número interno diferente para não
+        sobrescrever nada — "Nº no PDF" mostra o valor original, para você
+        conferir contra o documento.
+      </p>
+      {% if renumbered %}
+      <table>
+        <thead><tr><th>#</th><th>Nº no PDF</th><th>Ano</th><th>Matéria</th><th>Assunto</th><th>Gab.</th></tr></thead>
+        <tbody>
+          {% for q in renumbered %}
+          <tr><td>{{ q.id }}</td><td>{{ q.numero_original }}</td><td>{{ q.ano }}</td><td>{{ q.materia }}</td><td>{{ q.assunto }}</td><td>{{ q.gabarito }}</td></tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      {% else %}
+      <p class="empty">Nenhum conflito de numeração — todas as novas questões usaram o número do PDF.</p>
+      {% endif %}
+    </div>
+
+    <div class="section">
       <h2>Duplicadas (não adicionadas)</h2>
       {% if duplicates %}
       <table>
-        <thead><tr><th>QID</th><th>Ano</th><th>Matéria</th><th>Assunto</th></tr></thead>
+        <thead><tr><th>Nº no PDF</th><th>QID</th><th>Ano</th><th>Matéria</th><th>Assunto</th></tr></thead>
         <tbody>
           {% for q in duplicates %}
-          <tr><td>{{ q.qid }}</td><td>{{ q.ano }}</td><td>{{ q.materia }}</td><td>{{ q.assunto }}</td></tr>
+          <tr><td>{{ q.numero if q.numero is not none else '—' }}</td><td>{{ q.qid }}</td><td>{{ q.ano }}</td><td>{{ q.materia }}</td><td>{{ q.assunto }}</td></tr>
           {% endfor %}
         </tbody>
       </table>
