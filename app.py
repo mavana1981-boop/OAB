@@ -1,7 +1,8 @@
 import json
 import os
+import threading
 
-from flask import Flask, jsonify, render_template, request
+from flask import Flask, jsonify, redirect, render_template, request, url_for
 
 import db
 from importer import ImportError_, extract_questions_from_pdf
@@ -101,28 +102,73 @@ def importar_pdf():
 
     pdf_bytes = pdf_file.read()
 
+    # O processamento roda em segundo plano — a extração via Claude pode
+    # levar mais tempo do que o proxy do Railway tolera numa única
+    # requisição HTTP. O POST só registra o job e devolve na hora; a
+    # página de status faz polling até terminar.
+    job_id = db.create_job()
+    thread = threading.Thread(
+        target=_process_import_job, args=(job_id, pdf_bytes), daemon=True
+    )
+    thread.start()
+
+    return redirect(url_for("importar_status", job_id=job_id))
+
+
+def _process_import_job(job_id, pdf_bytes):
     try:
         raw_items = extract_questions_from_pdf(pdf_bytes)
     except ImportError_ as e:
-        return render_template("importar_resultado.html", erro=str(e)), 400
+        db.set_job_error(job_id, str(e))
+        return
     except Exception as e:
-        return render_template(
-            "importar_resultado.html",
-            erro=f"Falha ao processar o PDF com o Claude: {e}",
-        ), 500
+        db.set_job_error(job_id, f"Falha ao processar o PDF com o Claude: {e}")
+        return
 
     items = [
         {**it, "url": f"https://www.tecconcursos.com.br/questoes/{it['qid']}"}
         for it in raw_items
     ]
-    added, duplicates = db.insert_new_questions(items)
+
+    try:
+        added, duplicates = db.insert_new_questions(items)
+        total_atual = db.count()
+    except Exception as e:
+        db.set_job_error(job_id, f"Falha ao gravar as questões no banco: {e}")
+        return
+
+    db.set_job_done(job_id, len(raw_items), added, duplicates, total_atual)
+
+
+@app.route("/importar/status/<int:job_id>")
+def importar_status(job_id):
+    err = db_error_or_none()
+    if err:
+        return render_template(
+            "importar_resultado.html",
+            erro=f"Erro de conexão com o banco de dados: {err}",
+        ), 500
+
+    job = db.get_job(job_id)
+    if not job:
+        return render_template(
+            "importar_resultado.html",
+            erro="Job de importação não encontrado (pode ter sido de "
+            "antes de um redeploy do servidor).",
+        ), 404
+
+    if job["status"] == "processing":
+        return render_template("importar_processando.html", job_id=job_id)
+
+    if job["status"] == "error":
+        return render_template("importar_resultado.html", erro=job["error"])
 
     return render_template(
         "importar_resultado.html",
-        parsed=len(raw_items),
-        added=added,
-        duplicates=duplicates,
-        total_atual=db.count(),
+        parsed=job["parsed"],
+        added=job["added"] or [],
+        duplicates=job["duplicates"] or [],
+        total_atual=job["total_atual"],
     )
 
 
