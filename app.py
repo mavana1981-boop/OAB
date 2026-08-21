@@ -131,13 +131,13 @@ def _process_import_job(job_id, pdf_bytes):
     ]
 
     try:
-        added, duplicates = db.insert_new_questions(items)
+        added, renumbered, duplicates = db.insert_new_questions(items)
         total_atual = db.count()
     except Exception as e:
         db.set_job_error(job_id, f"Falha ao gravar as questões no banco: {e}")
         return
 
-    db.set_job_done(job_id, len(raw_items), added, duplicates, total_atual)
+    db.set_job_done(job_id, len(raw_items), added, renumbered, duplicates, total_atual)
 
 
 @app.route("/importar/status/<int:job_id>")
@@ -167,6 +167,7 @@ def importar_status(job_id):
         "importar_resultado.html",
         parsed=job["parsed"],
         added=job["added"] or [],
+        renumbered=job["renumbered"] or [],
         duplicates=job["duplicates"] or [],
         total_atual=job["total_atual"],
     )
