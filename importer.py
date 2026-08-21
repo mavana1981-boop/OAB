@@ -63,18 +63,44 @@ def _get_client():
     return Anthropic(api_key=api_key)
 
 
-def _extract_json_array(text):
+def _extract_json_array(text, stop_reason=None):
     """Claude foi instruído a responder só com o array JSON, mas por
-    segurança tentamos isolar o array mesmo se vier algum texto em volta."""
+    segurança tentamos isolar o array mesmo se vier algum texto em volta.
+    Também detecta o caso mais comum de falha: resposta cortada por
+    limite de tokens (PDF grande demais para uma única chamada)."""
     text = text.strip()
     if text.startswith("```"):
         text = re.sub(r"^```(json)?", "", text).strip()
         text = re.sub(r"```$", "", text).strip()
+
     start = text.find("[")
     end = text.rfind("]")
+
     if start == -1 or end == -1:
-        raise ImportError_("Claude não retornou um array JSON reconhecível.")
-    return json.loads(text[start : end + 1])
+        preview = text[:300] if text else "(resposta vazia)"
+        if stop_reason == "max_tokens":
+            raise ImportError_(
+                "O PDF é grande demais para ser processado em uma única "
+                "chamada — a resposta do Claude foi cortada antes de "
+                "terminar o JSON. Tente dividir o PDF em partes menores "
+                "(por exemplo, por matéria) e importe cada parte separadamente."
+            )
+        raise ImportError_(
+            f"Claude não retornou um array JSON reconhecível. "
+            f"Início da resposta: {preview}"
+        )
+
+    try:
+        return json.loads(text[start : end + 1])
+    except json.JSONDecodeError as e:
+        if stop_reason == "max_tokens":
+            raise ImportError_(
+                "O PDF é grande demais para ser processado em uma única "
+                "chamada — a resposta do Claude foi cortada antes de "
+                "terminar o JSON. Tente dividir o PDF em partes menores "
+                "(por exemplo, por matéria) e importe cada parte separadamente."
+            )
+        raise ImportError_(f"JSON retornado pelo Claude está malformado: {e}")
 
 
 def extract_questions_from_pdf(pdf_bytes):
@@ -85,7 +111,7 @@ def extract_questions_from_pdf(pdf_bytes):
 
     response = client.messages.create(
         model=MODEL,
-        max_tokens=16000,
+        max_tokens=32000,
         messages=[
             {
                 "role": "user",
@@ -106,7 +132,17 @@ def extract_questions_from_pdf(pdf_bytes):
 
     text_parts = [b.text for b in response.content if b.type == "text"]
     full_text = "\n".join(text_parts)
-    raw_items = _extract_json_array(full_text)
+
+    # Log de diagnóstico — aparece nos logs do Railway se algo der errado,
+    # sem precisar reproduzir o problema às cegas.
+    print(
+        f"[importer] stop_reason={response.stop_reason} "
+        f"resposta_len={len(full_text)} "
+        f"input_tokens={response.usage.input_tokens if response.usage else '?'} "
+        f"output_tokens={response.usage.output_tokens if response.usage else '?'}"
+    )
+
+    raw_items = _extract_json_array(full_text, stop_reason=response.stop_reason)
 
     cleaned = []
     for item in raw_items:
