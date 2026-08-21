@@ -143,6 +143,18 @@ def count():
         conn.close()
 
 
+def delete_all_questions():
+    """Apaga todas as questões da base. Irreversível — não mexe em
+    import_jobs (histórico de importações continua registrado)."""
+    conn = get_conn()
+    try:
+        with conn:
+            with conn.cursor() as cur:
+                cur.execute("DELETE FROM questoes")
+    finally:
+        conn.close()
+
+
 def fetch_all():
     conn = get_conn()
     try:
