@@ -21,6 +21,10 @@ Você vai receber um PDF do TecConcursos com um caderno de questões da OAB \
 (formato "501)A502)A503)A..." ou similar).
 
 Para CADA questão do PDF, extraia:
+- numero: o número impresso da própria questão no PDF, o dígito logo antes do \
+  parêntese que abre cada bloco (ex. no bloco "501) Marco Araripe pretende..." \
+  o numero é 501; em "119) Débora..." o numero é 119). É a numeração do \
+  PDF de origem, não um índice que você deve inventar.
 - ano: o ano da edição do exame, ex. no cabeçalho "FGV - NAC UNI OAB/OAB/2023" o ano é 2023 (inteiro)
 - materia: a matéria antes do primeiro " - " na linha de matéria/assunto \
   (ex. "Direito Empresarial (Comercial)" -> use apenas "Empresarial"; \
@@ -42,7 +46,7 @@ Para CADA questão do PDF, extraia:
 
 Responda APENAS com um array JSON válido, sem markdown, sem comentários, \
 no formato:
-[{"ano": 2023, "materia": "Empresarial", "assunto": "...", "gabarito": "A", "qid": 2490687}, ...]
+[{"numero": 501, "ano": 2023, "materia": "Empresarial", "assunto": "...", "gabarito": "A", "qid": 2490687}, ...]
 
 Inclua uma entrada para cada questão do PDF. Não pule nenhuma. Não invente \
 dados: se não conseguir identificar o gabarito de alguma questão com \
@@ -154,8 +158,13 @@ def extract_questions_from_pdf(pdf_bytes):
             gabarito = str(item["gabarito"]).strip().upper()
         except (KeyError, TypeError, ValueError):
             continue
+        try:
+            numero = int(item.get("numero"))
+        except (TypeError, ValueError):
+            numero = None
         cleaned.append(
             {
+                "numero": numero,
                 "qid": qid,
                 "ano": ano,
                 "materia": materia,
