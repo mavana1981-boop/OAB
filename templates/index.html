@@ -67,6 +67,20 @@
     color:var(--ink-soft);
     font-family:'IBM Plex Mono',monospace;
   }
+  .btn-import{
+    display:inline-block;
+    margin-top:14px;
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12px;
+    letter-spacing:.05em;
+    text-transform:uppercase;
+    background:var(--navy);
+    color:#fff;
+    text-decoration:none;
+    padding:9px 16px;
+    border-radius:2px;
+  }
+  .btn-import:hover{background:var(--navy-deep);}
   .seal{
     width:96px;height:96px;border-radius:50%;
     flex:0 0 auto;
@@ -335,6 +349,7 @@
       <div class="eyebrow">Caderno de Questões · Ordenação por Matéria e Assunto</div>
       <h1>Diário de Estudos — OAB</h1>
       <div class="subhead">Exame Unificado · Edições 2020–2026 · Estatística para revisão dirigida</div>
+      <a class="btn-import" href="{{ url_for('importar_form') }}">+ Importar novo PDF</a>
     </div>
     <div class="seal">
       <div class="seal-inner">
