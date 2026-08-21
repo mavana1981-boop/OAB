@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="refresh" content="4">
+<title>Processando importação — Diário de Estudos OAB</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#EFEAE0; --ink:#22262B; --ink-soft:#5B5A52;
+    --navy:#1B3A4B; --navy-deep:#122732; --brass:#A9822F; --line: rgba(34,38,43,0.15); --card:#F7F4EB;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:'Inter',sans-serif;}
+  .wrap{max-width:520px;margin:0 auto;padding:80px 24px;text-align:center;}
+  .eyebrow{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--ink-soft);margin-bottom:10px;}
+  h1{font-family:'Source Serif 4',serif;font-weight:700;font-size:26px;margin:0 0 14px;color:var(--navy-deep);}
+  p{color:var(--ink-soft);font-size:14px;line-height:1.6;}
+  .spinner{
+    width:36px;height:36px;margin:26px auto;
+    border:3px solid var(--line);
+    border-top-color:var(--navy);
+    border-radius:50%;
+    animation:spin 0.9s linear infinite;
+  }
+  @keyframes spin{to{transform:rotate(360deg);}}
+  .card{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--navy);padding:30px 24px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="eyebrow">Importação em andamento</div>
+  <div class="card">
+    <div class="spinner"></div>
+    <h1>Processando o PDF com o Claude…</h1>
+    <p>
+      Isso pode levar de alguns segundos a alguns minutos, dependendo do
+      tamanho do PDF. Esta página atualiza sozinha — não precisa fazer
+      nada, só deixar aberta.
+    </p>
+  </div>
+</div>
+</body>
+</html>
