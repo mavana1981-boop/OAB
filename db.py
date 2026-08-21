@@ -67,11 +67,17 @@ def init_db():
                         created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
                         parsed INTEGER,
                         added JSONB,
+                        renumbered JSONB,
                         duplicates JSONB,
                         error TEXT,
                         total_atual INTEGER
                     )
                     """
+                )
+                # Migração leve para bancos que já tinham import_jobs de
+                # uma versão anterior (sem a coluna 'renumbered').
+                cur.execute(
+                    "ALTER TABLE import_jobs ADD COLUMN IF NOT EXISTS renumbered JSONB"
                 )
     finally:
         conn.close()
@@ -178,44 +184,76 @@ def fetch_filtered(materia=None, ano=None, gabarito=None, busca=None):
 
 
 def insert_new_questions(items):
-    """items: lista de dicts com ano, materia, assunto, gabarito, qid, url
-    (sem 'id' — é atribuído aqui, continuando a numeração existente).
+    """items: lista de dicts com numero (posição da questão no PDF de
+    origem, pode ser None), ano, materia, assunto, gabarito, qid, url.
 
-    Usa INSERT ... ON CONFLICT (qid) DO NOTHING dentro de uma única
-    transação, o que cobre tanto duplicatas contra o banco quanto
-    duplicatas dentro do próprio lote sendo importado (uma vez inserida,
-    a linha já é visível para os próximos INSERTs da mesma transação).
+    Prioriza usar 'numero' como id — para que a numeração exibida no app
+    reflita fielmente o PDF de origem. Só cai para um id sequencial
+    (continuando a numeração já existente) quando esse número já está
+    ocupado por OUTRA questão (qid diferente) — o que acontece porque
+    cada PDF exportado pelo TecConcursos numera a partir de 1 de novo, e
+    pode colidir com números já usados por um PDF anterior.
 
-    Retorna (added, duplicates).
+    Retorna (added, renumbered, duplicates):
+      - added: inseridas usando o número original do PDF
+      - renumbered: inseridas, mas com id diferente do PDF por conflito
+        de numeração (cada item traz 'numero_original' para conferência)
+      - duplicates: questões cujo qid já existe na base (mesma questão,
+        não é inserida de novo)
     """
     added = []
+    renumbered = []
     duplicates = []
     conn = get_conn()
     try:
         with conn:
             with conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor) as cur:
                 cur.execute("SELECT COALESCE(MAX(id), 0) AS max_id FROM questoes")
-                next_id = cur.fetchone()["max_id"] + 1
+                fallback_next_id = cur.fetchone()["max_id"] + 1
 
                 for item in items:
+                    qid = item["qid"]
+
+                    cur.execute("SELECT 1 FROM questoes WHERE qid = %s", (qid,))
+                    if cur.fetchone():
+                        duplicates.append(item)
+                        continue
+
+                    preferred_id = item.get("numero")
+                    use_id = None
+                    if preferred_id is not None:
+                        cur.execute("SELECT 1 FROM questoes WHERE id = %s", (preferred_id,))
+                        if not cur.fetchone():
+                            use_id = preferred_id
+
+                    was_renumbered = use_id is None and preferred_id is not None
+                    if use_id is None:
+                        use_id = fallback_next_id
+
                     cur.execute(
                         """
                         INSERT INTO questoes (id, ano, materia, assunto, gabarito, qid, url)
                         VALUES (%(id)s, %(ano)s, %(materia)s, %(assunto)s, %(gabarito)s, %(qid)s, %(url)s)
-                        ON CONFLICT (qid) DO NOTHING
                         RETURNING id, ano, materia, assunto, gabarito, qid, url
                         """,
-                        {**item, "id": next_id},
+                        {**item, "id": use_id},
                     )
-                    row = cur.fetchone()
-                    if row:
-                        added.append(dict(row))
-                        next_id += 1
+                    row = dict(cur.fetchone())
+
+                    # nunca deixa o contador de fallback reutilizar um id
+                    # que acabamos de gravar (seja ele o número do PDF ou
+                    # um fallback anterior)
+                    if use_id >= fallback_next_id:
+                        fallback_next_id = use_id + 1
+
+                    if was_renumbered:
+                        row["numero_original"] = preferred_id
+                        renumbered.append(row)
                     else:
-                        duplicates.append(item)
+                        added.append(row)
     finally:
         conn.close()
-    return added, duplicates
+    return added, renumbered, duplicates
 
 
 # --- Jobs de importação em segundo plano ---------------------------------
@@ -255,7 +293,7 @@ def set_job_error(job_id, message):
         conn.close()
 
 
-def set_job_done(job_id, parsed, added, duplicates, total_atual):
+def set_job_done(job_id, parsed, added, renumbered, duplicates, total_atual):
     conn = get_conn()
     try:
         with conn:
@@ -264,12 +302,13 @@ def set_job_done(job_id, parsed, added, duplicates, total_atual):
                     """
                     UPDATE import_jobs
                     SET status = 'done', parsed = %s, added = %s,
-                        duplicates = %s, total_atual = %s
+                        renumbered = %s, duplicates = %s, total_atual = %s
                     WHERE id = %s
                     """,
                     (
                         parsed,
                         psycopg2.extras.Json(added),
+                        psycopg2.extras.Json(renumbered),
                         psycopg2.extras.Json(duplicates),
                         total_atual,
                         job_id,
