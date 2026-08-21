@@ -50,6 +50,63 @@ def api_questoes():
     return jsonify({"count": len(data), "questoes": data})
 
 
+@app.route("/apagar", methods=["GET"])
+def apagar_form():
+    err = db_error_or_none()
+    total = db.count() if not err else 0
+    return render_template(
+        "apagar.html",
+        token_configured=bool(IMPORT_TOKEN),
+        total_atual=total,
+        db_error=err,
+    )
+
+
+@app.route("/apagar", methods=["POST"])
+def apagar_tudo():
+    err = db_error_or_none()
+    if err:
+        return render_template(
+            "apagar.html",
+            erro=f"Erro de conexão com o banco de dados: {err}",
+            token_configured=bool(IMPORT_TOKEN),
+            total_atual=0,
+        ), 500
+
+    total_atual = db.count()
+
+    if not IMPORT_TOKEN:
+        return render_template(
+            "apagar.html",
+            erro="Ação desabilitada: defina a variável de ambiente "
+            "IMPORT_TOKEN no Railway para habilitá-la.",
+            token_configured=False,
+            total_atual=total_atual,
+        ), 400
+
+    token = request.form.get("token", "")
+    confirmacao = request.form.get("confirmacao", "").strip()
+
+    if token != IMPORT_TOKEN:
+        return render_template(
+            "apagar.html",
+            erro="Chave incorreta.",
+            token_configured=True,
+            total_atual=total_atual,
+        ), 403
+
+    if confirmacao != "APAGAR":
+        return render_template(
+            "apagar.html",
+            erro='Confirmação incorreta — digite exatamente "APAGAR" (maiúsculas) para confirmar.',
+            token_configured=True,
+            total_atual=total_atual,
+        ), 400
+
+    db.delete_all_questions()
+    return redirect(url_for("index"))
+
+
 @app.route("/healthz")
 def healthz():
     err = db_error_or_none()
